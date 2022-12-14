@@ -20,12 +20,8 @@ export default StyleSheet.create({
     borderTopRightRadius: 50,
   },
   hidingH1: {
-    fontFamily: 'montserrat-medium',
-    fontSize: 30,
-    lineHeight: 51.2,
-    color: GlobalColors.lightGrey,
-    textAlign: 'center',
-    paddingVertical: 40,
+    fontSize: 20,
+    color: GlobalColors.white,
   },
   centeredView: {
     justifyContent: 'center',
@@ -39,7 +35,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-evenly',
     flexDirection: 'row',
-    top: 170,
+    top: 250,
   },
   hidingh2: {
     color: GlobalColors.lightGrey,
@@ -49,5 +45,24 @@ export default StyleSheet.create({
     fontWeight: '400',
     lineHeight: 41,
     right: 25,
+  },
+  backIcon: {
+    width: 30,
+    height: 30,
+    right: '310%',
+  },
+  mapIcon: {
+    width: 50,
+    height: 73,
+    marginBottom: '8%',
+  },
+  circleView: {
+    width: 250,
+    height: 250,
+    backgroundColor: GlobalColors.darkOrange,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 500,
+    top: '30%',
   },
 });

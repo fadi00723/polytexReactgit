@@ -20,12 +20,8 @@ export default StyleSheet.create({
     borderTopRightRadius: 50,
   },
   hidingH1: {
-    fontFamily: 'montserrat-medium',
-    fontSize: 30,
-    lineHeight: 51.2,
+    fontSize: 20,
     color: GlobalColors.lightGrey,
-    textAlign: 'center',
-    paddingVertical: 40,
   },
   centeredView: {
     justifyContent: 'center',
@@ -49,5 +45,15 @@ export default StyleSheet.create({
     fontWeight: '400',
     lineHeight: 41,
     right: 25,
+  },
+  backIcon: {
+    width: 30,
+    height: 30,
+    right: '310%',
+  },
+  mapIcon: {
+    width: 50,
+    height: 73,
+    marginBottom: '8%',
   },
 });

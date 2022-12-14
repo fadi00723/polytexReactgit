@@ -3,5 +3,8 @@ export default {
   darkBlue: '#002D56',
   gold: '#ffd700',
   green: '#008000',
-  grey: '#6E6E6E',
+  lightGrey: '#8798AD',
+  orange: '#FC6903',
+  white: '#ffffff',
+  darkOrange: '#FC6903',
 };

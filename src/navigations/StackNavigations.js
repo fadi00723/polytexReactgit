@@ -3,6 +3,9 @@ import React from 'react';
 import SplashScreen from '../screens/splash/SplashScreen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from '../screens/home/HomeScreen';
+import TransactionsScreen from '../screens/transactions/TransactionsScreen';
+import LocationScreen from '../screens/locations/LocationsScreen';
+import SupplyLocation from '../screens/supply/SupplyLocation';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +19,9 @@ export default function StackNavigations() {
       }}>
       <Stack.Screen name="SplashScreen" component={SplashScreen} />
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen name="TransactionsScreen" component={TransactionsScreen} />
+      <Stack.Screen name="LocationScreen" component={LocationScreen} />
+      <Stack.Screen name="SupplyLocation" component={SupplyLocation} />
     </Stack.Navigator>
   );
 }
