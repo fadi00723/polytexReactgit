@@ -32,7 +32,7 @@ export default function TransactionsScreen() {
           />
           <CustomButton
             label={'Clean'}
-            onPress={() => navigation.navigate('TransactionsScreen')}
+            onPress={() => navigation.navigate('CleanScreen')}
           />
           <CustomButton
             label={'Supply To Location'}
