@@ -54,7 +54,7 @@ export default function ScanProgress() {
             <Text style={styles.txtH1}>Scanning in progress</Text>
           </View>
           <TouchableOpacity style={styles.circleView}>
-            <Text style={styles.hidingH1}>STARsadsT SCAN</Text>
+            <Text style={styles.hidingH1}>START SCAN</Text>
           </TouchableOpacity>
           {renderModal()}
         </View>
