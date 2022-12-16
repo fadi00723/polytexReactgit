@@ -7,6 +7,7 @@ import TransactionsScreen from '../screens/transactions/TransactionsScreen';
 import LocationScreen from '../screens/locations/LocationsScreen';
 import SupplyLocation from '../screens/supply/SupplyLocation';
 import CleanScreen from '../screens/clean/CleanScreen';
+import ScanProgress from '../screens/supply/ScanProgress';
 
 const Stack = createNativeStackNavigator();
 
@@ -24,6 +25,7 @@ export default function StackNavigations() {
       <Stack.Screen name="LocationScreen" component={LocationScreen} />
       <Stack.Screen name="SupplyLocation" component={SupplyLocation} />
       <Stack.Screen name="CleanScreen" component={CleanScreen} />
+      <Stack.Screen name="ScanProgress" component={ScanProgress} />
     </Stack.Navigator>
   );
 }

@@ -1,4 +1,11 @@
-import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  ScrollView,
+  Pressable,
+} from 'react-native';
 import React, {useState} from 'react';
 import CustomHeader from '../../components/CustomHeader/CustomHeader';
 import styles from './LocationScreen.style';
@@ -42,16 +49,21 @@ export default function LocationScreen() {
         <View
           style={{
             flexDirection: 'row',
-            justifyContent: 'center',
-            paddingVertical: '5%',
+            justifyContent: 'space-between',
+            padding: '5%',
           }}>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Pressable
+            onPress={() => {
+              console.log('backpressed'), navigation.goBack();
+            }}
+            hitSlop={40}>
             <Image
               source={require('../../../assets/icons/backIcon.png')}
               style={styles.backIcon}
             />
-          </TouchableOpacity>
+          </Pressable>
           <Text style={styles.hidingH1}>Choose Location</Text>
+          <View style={{width: 30, height: 30}} />
         </View>
         <View style={styles.centeredView}>
           <Image

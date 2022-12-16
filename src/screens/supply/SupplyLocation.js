@@ -1,4 +1,11 @@
-import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  ScrollView,
+  Pressable,
+} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import CustomHeader from '../../components/CustomHeader/CustomHeader';
 import styles from './SupplyLocation.style';
@@ -27,24 +34,27 @@ export default function SupplyLocation({route}) {
         <View
           style={{
             flexDirection: 'row',
-            justifyContent: 'center',
-            paddingVertical: '5%',
+            justifyContent: 'space-between',
+            padding: '5%',
           }}>
-          <TouchableOpacity
+          <Pressable
             onPress={() => {
-              console.log('here');
-              navigation.goBack();
-            }}>
+              console.log('backpressed'), navigation.goBack();
+            }}
+            hitSlop={40}>
             <Image
               source={require('../../../assets/icons/backIcon.png')}
               style={styles.backIcon}
             />
-          </TouchableOpacity>
-          <Text style={styles.hidingH1}>Supply to:</Text>
+          </Pressable>
+          <Text style={styles.hidingH1}>Choose Location</Text>
+          <View style={{width: 30, height: 30}} />
         </View>
         <View style={styles.centeredView}>
           <Text style={styles.hidingH1}>{address}</Text>
-          <TouchableOpacity style={styles.circleView}>
+          <TouchableOpacity
+            style={styles.circleView}
+            onPress={() => navigation.navigate('ScanProgress')}>
             <Text style={styles.hidingH1}>START SCAN</Text>
           </TouchableOpacity>
           {renderModal()}

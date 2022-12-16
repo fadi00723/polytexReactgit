@@ -49,7 +49,6 @@ export default StyleSheet.create({
   backIcon: {
     width: 30,
     height: 30,
-    right: '310%',
   },
   mapIcon: {
     width: 50,

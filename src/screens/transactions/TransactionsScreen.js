@@ -1,4 +1,4 @@
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Image, TouchableOpacity, Pressable} from 'react-native';
 import React from 'react';
 import CustomHeader from '../../components/CustomHeader/CustomHeader';
 import styles from './TransactionsScreen.style';
@@ -14,16 +14,21 @@ export default function TransactionsScreen() {
         <View
           style={{
             flexDirection: 'row',
-            justifyContent: 'center',
-            paddingVertical: '5%',
+            justifyContent: 'space-between',
+            padding: '5%',
           }}>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Pressable
+            onPress={() => {
+              console.log('backpressed'), navigation.goBack();
+            }}
+            hitSlop={40}>
             <Image
               source={require('../../../assets/icons/backIcon.png')}
               style={styles.backIcon}
             />
-          </TouchableOpacity>
+          </Pressable>
           <Text style={styles.hidingH1}>Transactions</Text>
+          <View style={{width: 30, height: 30}} />
         </View>
         <View style={styles.centeredView}>
           <Image

@@ -8,11 +8,11 @@ import {
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import CustomHeader from '../../components/CustomHeader/CustomHeader';
-import styles from './CleanScreen.style';
+import styles from './ScanProgress.style';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import {useNavigation} from '@react-navigation/native';
 
-export default function CleanScreen() {
+export default function ScanProgress() {
   const renderModal = () => {
     return (
       <View style={styles.mainModal}>
@@ -46,14 +46,15 @@ export default function CleanScreen() {
               style={styles.backIcon}
             />
           </Pressable>
-          <Text style={styles.hidingH1}>Clean</Text>
-          <View style={{width: 30, height: 30}} />
+          <Text style={styles.hidingH1}>Wash Received</Text>
+          <View style={{height: 30, width: 30}} />
         </View>
         <View style={styles.centeredView}>
-          <TouchableOpacity
-            style={styles.circleView}
-            onPress={() => navigation.navigate('ScanProgress')}>
-            <Text style={styles.hidingH1}>START SCAN</Text>
+          <View style={styles.containerView}>
+            <Text style={styles.txtH1}>Scanning in progress</Text>
+          </View>
+          <TouchableOpacity style={styles.circleView}>
+            <Text style={styles.hidingH1}>STARsadsT SCAN</Text>
           </TouchableOpacity>
           {renderModal()}
         </View>

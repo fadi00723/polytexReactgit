@@ -64,9 +64,22 @@ export default StyleSheet.create({
     borderRadius: 500,
     top: '30%',
   },
-  transIcon: {
-    width: 90,
-    height: 80,
-    marginBottom: '8%',
+
+  containerView: {
+    backgroundColor: GlobalColors.yellowish,
+    borderRadius: 62,
+    width: ScreenSize.screenWidth * 0.78,
+    height: ScreenSize.screenHeight * 0.06,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  txtH1: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: GlobalColors.white,
+  },
+  appIcon: {
+    width: 250,
+    height: 70,
   },
 });

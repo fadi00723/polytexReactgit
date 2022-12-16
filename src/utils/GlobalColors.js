@@ -7,4 +7,5 @@ export default {
   orange: '#FC6903',
   white: '#ffffff',
   darkOrange: '#FC6903',
+  yellowish: '#00CC00',
 };
