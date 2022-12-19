@@ -28,14 +28,15 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   mainModal: {
-    backgroundColor: GlobalColors.darkBlue,
-    width: ScreenSize.screenWidth * 0.9,
+    backgroundColor: GlobalColors.LightBlack,
+    width: ScreenSize.screenWidth * 0.6,
     height: ScreenSize.screenHeight * 0.08,
-    borderRadius: 55,
+    borderRadius: 100,
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     flexDirection: 'row',
-    top: 250,
+    top: '100%',
+    padding: '5%',
   },
   hidingh2: {
     color: GlobalColors.lightGrey,
@@ -73,6 +74,14 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  containerViewStopped: {
+    backgroundColor: GlobalColors.lightGrey,
+    borderRadius: 62,
+    width: ScreenSize.screenWidth * 0.78,
+    height: ScreenSize.screenHeight * 0.06,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   txtH1: {
     fontSize: 18,
     fontWeight: '600',
@@ -81,5 +90,31 @@ export default StyleSheet.create({
   appIcon: {
     width: 250,
     height: 70,
+  },
+  containerTable: {
+    width: '80%',
+    height: 50,
+    paddingTop: 30,
+    backgroundColor: GlobalColors.mainBlue,
+  },
+  head: {
+    height: 40,
+    backgroundColor: GlobalColors.mainBlue,
+  },
+  wrapper: {
+    flexDirection: 'row',
+  },
+  title: {
+    flex: 0.26,
+    backgroundColor: GlobalColors.mainBlue,
+  },
+  row: {
+    height: 28,
+    backgroundColor: 'black',
+  },
+  text: {
+    color: GlobalColors.white,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });

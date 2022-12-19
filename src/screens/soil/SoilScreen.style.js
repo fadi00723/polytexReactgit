@@ -65,8 +65,8 @@ export default StyleSheet.create({
     top: '10%',
   },
   transIcon: {
-    width: 90,
-    height: 80,
+    width: 62,
+    height: 68,
     marginBottom: '8%',
   },
 });

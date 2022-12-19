@@ -29,7 +29,10 @@ export default function HomeScreen() {
             label={'TRANSACTIONS'}
             onPress={() => navigation.navigate('TransactionsScreen')}
           />
-          <CustomButton label={'ADD/EDIT ITEMS'} />
+          <CustomButton
+            label={'ADD/EDIT ITEMS'}
+            onPress={() => navigation.navigate('EditItems')}
+          />
           <CustomButton label={'QUICK SCAN'} />
           <View>{renderModal()}</View>
         </View>

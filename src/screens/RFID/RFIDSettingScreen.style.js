@@ -19,10 +19,7 @@ export default StyleSheet.create({
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
   },
-  hidingH1: {
-    fontSize: 20,
-    color: GlobalColors.white,
-  },
+
   centeredView: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -35,7 +32,21 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-evenly',
     flexDirection: 'row',
-    top: '45%',
+    top: 170,
+  },
+  btnText: {
+    color: GlobalColors.LightBlack,
+    fontSize: 25,
+    fontWeight: 'bold',
+  },
+  GreenBtn: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    backgroundColor: GlobalColors.yellowish,
+    justifyContent: 'center',
+    alignItems: 'center',
+    left: '30%',
   },
   hidingh2: {
     color: GlobalColors.lightGrey,
@@ -46,27 +57,51 @@ export default StyleSheet.create({
     lineHeight: 41,
     right: 25,
   },
+  mainContainer: {
+    backgroundColor: GlobalColors.darkBlue,
+    justifyContent: 'center',
+    flex: 1,
+  },
+  innerView: {
+    backgroundColor: GlobalColors.mainBlue,
+    flex: 1,
+    borderTopLeftRadius: 50,
+    borderTopRightRadius: 50,
+  },
+  hidingH1: {
+    fontSize: 20,
+    color: GlobalColors.lightGrey,
+  },
+  hidingH5: {
+    fontSize: 20,
+    color: GlobalColors.white,
+  },
+  btnView: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    paddingTop: '5%',
+  },
+  hidingH6: {
+    fontSize: 20,
+    color: GlobalColors.white,
+    alignSelf: 'center',
+  },
+
+  hidingH7: {
+    fontSize: 15,
+    color: GlobalColors.white,
+    alignSelf: 'center',
+  },
   backIcon: {
     width: 30,
     height: 30,
   },
-  mapIcon: {
-    width: 50,
-    height: 73,
-    marginBottom: '8%',
-  },
-  circleView: {
-    width: 250,
-    height: 250,
-    backgroundColor: GlobalColors.darkOrange,
+  newBtn: {
+    width: 100,
+    height: 40,
+    borderRadius: 16,
+    backgroundColor: GlobalColors.LightBlack,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 500,
-    top: '10%',
-  },
-  transIcon: {
-    width: 90,
-    height: 80,
-    marginBottom: '8%',
   },
 });

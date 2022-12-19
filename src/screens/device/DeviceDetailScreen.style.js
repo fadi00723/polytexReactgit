@@ -21,7 +21,7 @@ export default StyleSheet.create({
   },
   hidingH1: {
     fontSize: 20,
-    color: GlobalColors.white,
+    color: GlobalColors.lightGrey,
   },
   centeredView: {
     justifyContent: 'center',
@@ -35,7 +35,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-evenly',
     flexDirection: 'row',
-    top: '45%',
+    top: 170,
   },
   hidingh2: {
     color: GlobalColors.lightGrey,
@@ -46,27 +46,53 @@ export default StyleSheet.create({
     lineHeight: 41,
     right: 25,
   },
+  hidingh4: {
+    color: GlobalColors.white,
+    fontWeight: 'bold',
+    fontSize: 20,
+    lineHeight: 41,
+    paddingBottom: '10%',
+  },
   backIcon: {
     width: 30,
     height: 30,
   },
-  mapIcon: {
-    width: 50,
-    height: 73,
-    marginBottom: '8%',
-  },
-  circleView: {
-    width: 250,
-    height: 250,
-    backgroundColor: GlobalColors.darkOrange,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 500,
-    top: '10%',
-  },
   transIcon: {
-    width: 90,
-    height: 80,
+    width: 70,
+    height: 63,
     marginBottom: '8%',
+  },
+  containerTable: {
+    width: '80%',
+    height: 50,
+    paddingTop: 30,
+    backgroundColor: GlobalColors.mainBlue,
+  },
+  head: {
+    height: 40,
+    backgroundColor: GlobalColors.mainBlue,
+  },
+  wrapper: {
+    flexDirection: 'row',
+  },
+  title: {
+    flex: 0.26,
+    backgroundColor: GlobalColors.mainBlue,
+  },
+  row: {
+    height: 90,
+    // backgroundColor: 'black',
+  },
+  text: {
+    color: GlobalColors.white,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  viewNew: {
+    padding: '10%',
+  },
+  viewNewDeatil: {
+    paddingTop: '10%',
+    right: '5%',
   },
 });

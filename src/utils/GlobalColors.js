@@ -8,4 +8,6 @@ export default {
   white: '#ffffff',
   darkOrange: '#FC6903',
   yellowish: '#00CC00',
+  LightBlack: '#212121',
+  skyBlue: '#D0DAE6',
 };

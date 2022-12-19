@@ -21,11 +21,13 @@ export default StyleSheet.create({
   },
   hidingH1: {
     fontSize: 20,
-    color: GlobalColors.white,
+    textAlign: 'center',
+    color: GlobalColors.lightGrey,
   },
   centeredView: {
     justifyContent: 'center',
     alignItems: 'center',
+    flexDirection: 'row',
   },
   mainModal: {
     backgroundColor: GlobalColors.darkBlue,
@@ -35,7 +37,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-evenly',
     flexDirection: 'row',
-    top: '45%',
+    top: 170,
   },
   hidingh2: {
     color: GlobalColors.lightGrey,
@@ -50,23 +52,23 @@ export default StyleSheet.create({
     width: 30,
     height: 30,
   },
-  mapIcon: {
-    width: 50,
-    height: 73,
+  transIcon: {
+    width: 70,
+    height: 63,
     marginBottom: '8%',
   },
-  circleView: {
-    width: 250,
-    height: 250,
-    backgroundColor: GlobalColors.darkOrange,
+  containerbtn: {
+    backgroundColor: GlobalColors.orange,
+    borderRadius: 16,
+    width: ScreenSize.screenWidth * 0.35,
+    height: ScreenSize.screenHeight * 0.08,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 500,
-    top: '10%',
+    margin: '5%',
   },
-  transIcon: {
-    width: 90,
-    height: 80,
-    marginBottom: '8%',
+  txtH1: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: GlobalColors.white,
   },
 });

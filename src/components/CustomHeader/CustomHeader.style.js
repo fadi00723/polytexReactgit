@@ -6,6 +6,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
+    paddingHorizontal: '20%',
   },
   appIcon: {
     width: 125,
@@ -26,5 +27,9 @@ export default StyleSheet.create({
     fontWeight: '400',
     lineHeight: 41,
     right: 25,
+  },
+  synIcon: {
+    width: 30,
+    height: 30,
   },
 });

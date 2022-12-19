@@ -8,11 +8,11 @@ import {
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import CustomHeader from '../../components/CustomHeader/CustomHeader';
-import styles from './CleanScreen.style';
+import styles from './SoilScreen.style';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import {useNavigation} from '@react-navigation/native';
 
-export default function CleanScreen() {
+export default function SoilScreen() {
   const renderModal = () => {
     return (
       <View style={styles.mainModal}>
@@ -46,12 +46,12 @@ export default function CleanScreen() {
               style={styles.backIcon}
             />
           </Pressable>
-          <Text style={styles.hidingH1}>Clean</Text>
+          <Text style={styles.hidingH1}>Soil</Text>
           <View style={{width: 30, height: 30}} />
         </View>
         <View style={styles.centeredView}>
           <Image
-            source={require('../../../assets/icons/cleanIcon.png')}
+            source={require('../../../assets/icons/soilIcon.png')}
             style={styles.transIcon}
           />
           <TouchableOpacity
