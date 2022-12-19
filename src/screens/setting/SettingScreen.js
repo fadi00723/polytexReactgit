@@ -28,7 +28,7 @@ export default function SettingScreen() {
     <View style={styles.mainContainer}>
       <CustomHeader
         sourceImg={
-          showSync ? require('../../../assets/icons/syncIcon.gif') : null
+          showSync ? require('../../../assets/icons/syncIcon2.gif') : null
         }
       />
       <View style={styles.innerView}>

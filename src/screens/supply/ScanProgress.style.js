@@ -33,7 +33,7 @@ export default StyleSheet.create({
     height: ScreenSize.screenHeight * 0.08,
     borderRadius: 100,
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'space-evenly',
     flexDirection: 'row',
     top: '100%',
     padding: '5%',
