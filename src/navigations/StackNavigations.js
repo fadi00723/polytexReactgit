@@ -16,6 +16,8 @@ import AlertScreen from '../screens/alerts/AlertScreen';
 import DeviceDetailScreen from '../screens/device/DeviceDetailScreen';
 import AdvanceSettings from '../screens/advanceSetting/AdvanceSettings';
 import AdvanceSettingsLast from '../screens/advanceSettingLast/AdvanceSettingsLast';
+import QuickScan from '../screens/quickScan/QuickScan';
+import EditItemSubType from '../screens/editItems/EditItemSubType';
 
 const Stack = createNativeStackNavigator();
 
@@ -41,6 +43,8 @@ export default function StackNavigations() {
       <Stack.Screen name="AlertScreen" component={AlertScreen} />
       <Stack.Screen name="DeviceDetailScreen" component={DeviceDetailScreen} />
       <Stack.Screen name="AdvanceSettings" component={AdvanceSettings} />
+      <Stack.Screen name="QuickScan" component={QuickScan} />
+      <Stack.Screen name="EditItemSubType" component={EditItemSubType} />
       <Stack.Screen
         name="AdvanceSettingsLast"
         component={AdvanceSettingsLast}

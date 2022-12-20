@@ -5,7 +5,7 @@ import styles from './EditItemScreen.style';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import {useNavigation} from '@react-navigation/native';
 
-export default function EditItems() {
+export default function EditItem() {
   const navigation = useNavigation();
   return (
     <View style={styles.mainContainer}>
@@ -32,20 +32,44 @@ export default function EditItems() {
         </View>
         <View>
           <View style={styles.centeredView}>
-            <TouchableOpacity style={styles.containerbtn}>
+            <TouchableOpacity
+              style={styles.containerbtn}
+              onPress={() =>
+                navigation.navigate('EditItemSubType', {
+                  items: 'T-shirts',
+                })
+              }>
               <Text style={styles.txtH1}>T-shirts</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.containerbtn}>
-              <Text style={styles.txtH1}>latest</Text>
+            <TouchableOpacity
+              style={styles.containerbtn}
+              onPress={() =>
+                navigation.navigate('EditItemSubType', {
+                  items: 'Pants',
+                })
+              }>
+              <Text style={styles.txtH1}>Pants</Text>
             </TouchableOpacity>
           </View>
 
           <View style={styles.centeredView}>
-            <TouchableOpacity style={styles.containerbtn}>
-              <Text style={styles.txtH1}>{'new'}</Text>
+            <TouchableOpacity
+              style={styles.containerbtn}
+              onPress={() =>
+                navigation.navigate('EditItemSubType', {
+                  items: 'Blanket',
+                })
+              }>
+              <Text style={styles.txtH1}>Blanket</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.containerbtn}>
-              <Text style={styles.txtH1}>latest</Text>
+            <TouchableOpacity
+              style={styles.containerbtn}
+              onPress={() =>
+                navigation.navigate('EditItemSubType', {
+                  items: 'Blue & White pents',
+                })
+              }>
+              <Text style={styles.txtH1}>Blue & White pents</Text>
             </TouchableOpacity>
           </View>
         </View>

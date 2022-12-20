@@ -10,4 +10,5 @@ export default {
   yellowish: '#00CC00',
   LightBlack: '#212121',
   skyBlue: '#D0DAE6',
+  red: '#DA000D',
 };

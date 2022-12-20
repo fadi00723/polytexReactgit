@@ -6,26 +6,42 @@ import {
   ScrollView,
   Pressable,
 } from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import CustomHeader from '../../components/CustomHeader/CustomHeader';
-import styles from './SupplyLocation.style';
+import styles from './EditItemSubType.style';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import {useNavigation} from '@react-navigation/native';
 
-export default function SupplyLocation({route}) {
-  const renderModal = () => {
+export default function EditItemSubType({route}) {
+  const [locations, setLocations] = useState([
+    {
+      address: 'XS',
+    },
+    {
+      address: 'S',
+    },
+    {
+      address: 'XL',
+    },
+    {
+      address: 'L',
+    },
+  ]);
+  const renderButton = item => {
     return (
-      <View style={styles.mainModal}>
-        <Image
-          source={require('../../../assets/icons/meterIcon.png')}
-          style={{width: 40, height: 29}}
-        />
-        <Text style={styles.hidingh2}>READING POWER:</Text>
-        <Text style={styles.hidingh3}>X dbi</Text>
-      </View>
+      <CustomButton
+        label={item.address}
+        onPress={() =>
+          navigation.navigate('SupplyLocation', {
+            address: item.address,
+            items: items,
+            type: 'Edit',
+          })
+        }
+      />
     );
   };
-  const {address, items, type} = route.params;
+  const {items} = route.params;
   const navigation = useNavigation();
   return (
     <View style={styles.mainContainer}>
@@ -47,22 +63,18 @@ export default function SupplyLocation({route}) {
               style={styles.backIcon}
             />
           </Pressable>
-          {type == 'Edit' ? (
-            <Text style={styles.hidingH1}>Add/Edit</Text>
-          ) : (
-            <Text style={styles.hidingH1}>Choose Location</Text>
-          )}
+          <Text style={styles.hidingH9}>Choose item sub-type to Add/Edit</Text>
           <View style={{width: 30, height: 30}} />
         </View>
         <View style={styles.centeredView}>
-          <Text style={styles.hidingH1}>{items}</Text>
-          <Text style={styles.hidingH1}>{address}</Text>
-          <TouchableOpacity
-            style={styles.circleView}
-            onPress={() => navigation.navigate('ScanProgress')}>
-            <Text style={styles.hidingH1}>START SCAN</Text>
-          </TouchableOpacity>
-          {renderModal()}
+          {/* <Image
+            source={require('../../../assets/icons/mapIcon.png')}
+            style={styles.mapIcon}
+          /> */}
+          <ScrollView>
+            {locations.map(renderButton)}
+            <View style={{height: 150}} />
+          </ScrollView>
         </View>
       </View>
     </View>
