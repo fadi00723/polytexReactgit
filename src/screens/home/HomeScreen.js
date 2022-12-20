@@ -1,12 +1,24 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, BackHandler} from 'react-native';
 import React from 'react';
 import CustomHeader from '../../components/CustomHeader/CustomHeader';
 import styles from './HomeScreen.style';
 import CustomButton from '../../components/CustomButton/CustomButton';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, useFocusEffect} from '@react-navigation/native';
+import strings from '../../constants/lng/LocalizedStrings';
 
 export default function HomeScreen() {
   const navigation = useNavigation();
+  useFocusEffect(
+    React.useCallback(() => {
+      const onBackPress = () => {
+        BackHandler.exitApp();
+        return true;
+      };
+      BackHandler.addEventListener('hardwareBackPress', onBackPress);
+      return () =>
+        BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+    }, []),
+  );
   const renderModal = () => {
     return (
       <View style={styles.mainModal}>
@@ -23,18 +35,18 @@ export default function HomeScreen() {
     <View style={styles.mainContainer}>
       <CustomHeader />
       <View style={styles.innerView}>
-        <Text style={styles.hidingH1}>Full Cycle Solution</Text>
+        <Text style={styles.hidingH1}>{strings.FULLCYCLESOLUTION}</Text>
         <View style={styles.centeredView}>
           <CustomButton
-            label={'TRANSACTIONS'}
+            label={strings.TRANSACTIONS}
             onPress={() => navigation.navigate('TransactionsScreen')}
           />
           <CustomButton
-            label={'ADD/EDIT ITEMS'}
+            label={strings.ADDEDITITEMS}
             onPress={() => navigation.navigate('EditItems')}
           />
           <CustomButton
-            label={'QUICK SCAN'}
+            label={strings.QUICKSCAN}
             onPress={() => navigation.navigate('QuickScan')}
           />
           <View>{renderModal()}</View>

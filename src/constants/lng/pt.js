@@ -1,0 +1,15 @@
+export default {
+  ENGLISH: 'Inglês',
+  LANGUAGE: 'Língua',
+  SYNCDATA: 'sincronizar dados',
+  RFIDSETTING: 'RFID Contexto',
+  ALERTS: 'Alertas',
+  DEVICEDETAILS: 'Detalhes do dispositivo',
+  ADVANCEDSETTINGS: 'Configurações avançadas',
+  SETTINGS: 'Definições',
+  SETTINGS: 'Settings',
+  FULLCYCLESOLUTION: 'Solução de ciclo completo',
+  TRANSACTIONS: 'TRANSACTIONS',
+  ADDEDITITEMS: 'ADICIONAR/EDITAR ITENS',
+  QUICKSCAN: 'ESCANEAMENTO RÁPIDO',
+};
