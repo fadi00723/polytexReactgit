@@ -71,7 +71,7 @@ export default function QuickScan() {
             onPress={() => {
               setShowModal(true);
             }}>
-            <Text style={styles.hidingH1}>START SCAN</Text>
+            <Text style={styles.hidingH1}>{strings.STARTSCAN}</Text>
           </TouchableOpacity>
 
           {renderModal()}

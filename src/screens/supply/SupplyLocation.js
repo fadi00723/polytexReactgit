@@ -60,7 +60,7 @@ export default function SupplyLocation({route}) {
           <TouchableOpacity
             style={styles.circleView}
             onPress={() => navigation.navigate('ScanProgress')}>
-            <Text style={styles.hidingH1}>START SCAN</Text>
+            <Text style={styles.hidingH1}>{strings.STARTSCAN}</Text>
           </TouchableOpacity>
           {renderModal()}
         </View>

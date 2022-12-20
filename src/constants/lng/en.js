@@ -11,4 +11,8 @@ export default {
   TRANSACTIONS: 'TRANSACTIONS',
   ADDEDITITEMS: 'ADD/EDIT ITEMS',
   QUICKSCAN: 'QUICK SCAN',
+  CLEAN: 'Clean',
+  SUPPLYTOLOCAITON: 'Supply To Location',
+  SOIL: 'Soil',
+  STARTSCAN: 'START SCAN',
 };

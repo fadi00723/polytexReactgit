@@ -9,7 +9,11 @@ export default {
   SETTINGS: 'Definições',
   SETTINGS: 'Settings',
   FULLCYCLESOLUTION: 'Solução de ciclo completo',
-  TRANSACTIONS: 'TRANSACTIONS',
+  TRANSACTIONS: 'TRANSAÇÕES',
   ADDEDITITEMS: 'ADICIONAR/EDITAR ITENS',
   QUICKSCAN: 'ESCANEAMENTO RÁPIDO',
+  CLEAN: 'Limpar',
+  SUPPLYTOLOCAITON: 'Fornecimento para o local',
+  SOIL: 'Solo',
+  STARTSCAN: 'INICIA ESCANEAMENTO',
 };

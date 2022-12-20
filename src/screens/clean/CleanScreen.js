@@ -11,6 +11,7 @@ import CustomHeader from '../../components/CustomHeader/CustomHeader';
 import styles from './CleanScreen.style';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import {useNavigation} from '@react-navigation/native';
+import strings from '../../constants/lng/LocalizedStrings';
 
 export default function CleanScreen() {
   const renderModal = () => {
@@ -46,7 +47,7 @@ export default function CleanScreen() {
               style={styles.backIcon}
             />
           </Pressable>
-          <Text style={styles.hidingH1}>Clean</Text>
+          <Text style={styles.hidingH1}>{strings.CLEAN}</Text>
           <View style={{width: 30, height: 30}} />
         </View>
         <View style={styles.centeredView}>
@@ -57,7 +58,7 @@ export default function CleanScreen() {
           <TouchableOpacity
             style={styles.circleView}
             onPress={() => navigation.navigate('ScanProgress')}>
-            <Text style={styles.hidingH1}>START SCAN</Text>
+            <Text style={styles.hidingH1}>{strings.STARTSCAN}</Text>
           </TouchableOpacity>
           {renderModal()}
         </View>

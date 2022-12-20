@@ -4,6 +4,7 @@ import CustomHeader from '../../components/CustomHeader/CustomHeader';
 import styles from './TransactionsScreen.style';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import {useNavigation} from '@react-navigation/native';
+import strings from '../../constants/lng/LocalizedStrings';
 
 export default function TransactionsScreen() {
   const navigation = useNavigation();
@@ -27,7 +28,7 @@ export default function TransactionsScreen() {
               style={styles.backIcon}
             />
           </Pressable>
-          <Text style={styles.hidingH1}>Transactions</Text>
+          <Text style={styles.hidingH1}>{strings.TRANSACTIONS}</Text>
           <View style={{width: 30, height: 30}} />
         </View>
         <View style={styles.centeredView}>
@@ -36,15 +37,15 @@ export default function TransactionsScreen() {
             style={styles.transIcon}
           />
           <CustomButton
-            label={'Clean'}
+            label={strings.CLEAN}
             onPress={() => navigation.navigate('CleanScreen')}
           />
           <CustomButton
-            label={'Supply To Location'}
+            label={strings.SUPPLYTOLOCAITON}
             onPress={() => navigation.navigate('LocationScreen')}
           />
           <CustomButton
-            label={'Soil'}
+            label={strings.SOIL}
             onPress={() => navigation.navigate('SoilScreen')}
           />
         </View>
