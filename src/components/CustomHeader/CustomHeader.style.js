@@ -29,7 +29,7 @@ export default StyleSheet.create({
     right: 25,
   },
   synIcon: {
-    width: 30,
-    height: 30,
+    width: 55,
+    height: 55,
   },
 });
