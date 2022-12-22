@@ -11,7 +11,6 @@ export default function HomeScreen() {
   useFocusEffect(
     React.useCallback(() => {
       const onBackPress = () => {
-        BackHandler.exitApp();
         return true;
       };
       BackHandler.addEventListener('hardwareBackPress', onBackPress);

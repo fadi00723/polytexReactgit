@@ -13,6 +13,12 @@ export default StyleSheet.create({
     justifyContent: 'center',
     flex: 1,
   },
+  dropdown1RowStyle: {
+    borderBottomColor: '#8798AD',
+    width: '70%',
+    alignSelf: 'center',
+  },
+  dropdown1RowTxtStyle: {color: 'white', textAlign: 'center'},
   innerView: {
     backgroundColor: GlobalColors.mainBlue,
     flex: 1,
@@ -78,8 +84,8 @@ export default StyleSheet.create({
   },
   btnView: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    paddingTop: '5%',
+    justifyContent: 'space-between',
+    paddingTop: '7%',
   },
   hidingH6: {
     fontSize: 20,
@@ -97,8 +103,8 @@ export default StyleSheet.create({
     height: 30,
   },
   newBtn: {
-    width: 100,
-    height: 40,
+    width: 120,
+    height: 70,
     borderRadius: 16,
     backgroundColor: GlobalColors.LightBlack,
     justifyContent: 'center',

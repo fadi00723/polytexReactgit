@@ -46,7 +46,7 @@ export default function AdvanceSettingsLast() {
             label={'Delete FTT'}
             onPress={() => setShowModal(true)}
           />
-          <CustomButton label={'Polymon'} />
+
           <CustomButton
             label={'Exit application'}
             onPress={() => setShowModalExit(true)}
@@ -55,7 +55,7 @@ export default function AdvanceSettingsLast() {
             <CustomModal
               visible={showModalExit}
               setShowModal={setShowModalExit}
-              modalTitle={'Are you sure you want to Exit application?'}
+              modalTitle={'Are you sure you want to exit the application?'}
               onPressConfirm={() => {
                 setShowModalExit(false);
                 BackHandler.exitApp();

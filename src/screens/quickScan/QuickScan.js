@@ -13,6 +13,7 @@ import styles from './QuickScan.style';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import {useNavigation} from '@react-navigation/native';
 import GlobalColors from '../../utils/GlobalColors';
+import strings from '../../constants/lng/LocalizedStrings';
 
 export default function QuickScan() {
   const [showModal, setShowModal] = useState(false);

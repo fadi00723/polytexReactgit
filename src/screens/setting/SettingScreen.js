@@ -118,7 +118,7 @@ export default function SettingScreen() {
                 ? require('../../../assets/icons/EnglishIcon.png')
                 : require('../../../assets/icons/PortugueseIcon.png')
             }
-            styleImg={{width: 30, height: 30, borderRadius: 15}}
+            styleImg={{width: 30, height: 30, borderRadius: 15, left: '90%'}}
             onPress={() => setShowModal(true)}
           />
           <CustomButton label={strings.SYNCDATA} onPress={() => syncdata()} />

@@ -129,10 +129,13 @@ export default function AdvanceSettings() {
             <TextInput
               placeholder={'Please type your code'}
               secureTextEntry={true}
+              onEndEditing={() => {
+                navigation.navigate('AdvanceSettingsLast');
+              }}
             />
           </View>
         </View>
-        {renderKeypad()}
+        {/* {renderKeypad()} */}
       </View>
       <View>
         <Modal

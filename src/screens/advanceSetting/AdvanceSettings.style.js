@@ -108,7 +108,7 @@ export default StyleSheet.create({
     textAlign: 'center',
   },
   textInput: {
-    width: '80%',
+    width: '90%',
     borderRadius: 100,
     backgroundColor: GlobalColors.white,
     justifyContent: 'center',
