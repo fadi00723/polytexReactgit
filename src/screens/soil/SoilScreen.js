@@ -11,6 +11,7 @@ import CustomHeader from '../../components/CustomHeader/CustomHeader';
 import styles from './SoilScreen.style';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import {useNavigation} from '@react-navigation/native';
+import strings from '../../constants/lng/LocalizedStrings';
 
 export default function SoilScreen() {
   const renderModal = () => {

@@ -1,4 +1,11 @@
-import {View, Text, Image, Pressable, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  Pressable,
+  TouchableOpacity,
+  ScrollView,
+} from 'react-native';
 import React, {useState} from 'react';
 import CustomHeader from '../../components/CustomHeader/CustomHeader';
 import styles from './RFIDSettingScreen.style';
@@ -39,7 +46,7 @@ export default function RFIDSettingScreen() {
         </View>
         <View style={styles.centeredView}>
           <Text style={styles.hidingH5}>Select Frequency area:</Text>
-          <View style={{paddingTop: '5%'}}>
+          <View style={{paddingTop: '3%'}}>
             <SelectDropdown
               data={countries}
               defaultValueByIndex={1}
@@ -47,7 +54,8 @@ export default function RFIDSettingScreen() {
                 backgroundColor: GlobalColors.LightBlack,
                 borderRadius: 16,
               }}
-              rowTextStyle={{color: 'white'}}
+              rowStyle={styles.dropdown1RowStyle}
+              rowTextStyle={styles.dropdown1RowTxtStyle}
               dropdownOverlayColor={'transparent'}
               buttonTextStyle={{
                 color: 'white',
@@ -56,6 +64,7 @@ export default function RFIDSettingScreen() {
               buttonStyle={{
                 backgroundColor: GlobalColors.LightBlack,
                 width: '90%',
+                height: '18%',
                 borderRadius: 16,
               }}
               renderDropdownIcon={isOpened => {
@@ -88,7 +97,7 @@ export default function RFIDSettingScreen() {
               style={{
                 flexDirection: 'row',
                 justifyContent: 'center',
-                marginVertical: '7%',
+                marginVertical: '5%',
               }}>
               <Text style={styles.hidingH6}>Adjust RFID dbi:</Text>
               <View style={styles.GreenBtn}>
@@ -129,22 +138,29 @@ export default function RFIDSettingScreen() {
           </View>
           <View
             style={{
-              top: '5%',
               width: '90%',
               height: '25%',
               backgroundColor: GlobalColors.skyBlue,
+              borderRadius: 12,
             }}>
-            <View style={{flexDirection: 'row', top: '25%', left: '20%'}}>
-              <Text style={{fontSize: 20, fontWeight: 'bold'}}>Total:0</Text>
-              <Text style={{left: 23, fontSize: 20, fontWeight: 'bold'}}>
+            <View style={{flexDirection: 'row', top: '32%', left: '20%'}}>
+              <Text style={{fontSize: 20, fontWeight: '500', color: '#212121'}}>
+                Total:0
+              </Text>
+              <Text
+                style={{
+                  fontSize: 20,
+                  fontWeight: '500',
+                  color: '#212121',
+                  left: 23,
+                }}>
                 Unique:0
               </Text>
             </View>
           </View>
         </View>
-        <View style={{top: '5%'}}>
-          <CustomButton label={'SAVE'} onPress={() => navigation.goBack()} />
-        </View>
+        <CustomButton label={'SAVE'} onPress={() => navigation.goBack()} />
+        <View style={{height: '20%'}} />
       </View>
     </View>
   );
