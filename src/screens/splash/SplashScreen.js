@@ -8,7 +8,7 @@ export default function SplashScreen() {
 
   setTimeout(() => {
     navigation.navigate('HomeScreen');
-  }, 90000000000);
+  }, 2000);
   return (
     <View style={styles.container}>
       <Image

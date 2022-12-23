@@ -6,12 +6,13 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
-    paddingHorizontal: '20%',
+    paddingHorizontal: '27%',
   },
   appIcon: {
     width: 125,
     height: 35.5,
     marginHorizontal: '10%',
+    left: '20%',
   },
   settingIcon: {
     width: 30,

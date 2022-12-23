@@ -52,6 +52,8 @@ export default function RFIDSettingScreen() {
               defaultValueByIndex={1}
               dropdownStyle={{
                 backgroundColor: GlobalColors.LightBlack,
+                justifyContent: 'center',
+                alignItems: 'center',
                 borderRadius: 16,
               }}
               rowStyle={styles.dropdown1RowStyle}
@@ -61,10 +63,14 @@ export default function RFIDSettingScreen() {
                 color: 'white',
                 backgroundColor: GlobalColors.LightBlack,
                 fontFamily: 'Montserrat-Bold',
+                justifyContent: 'center',
+                alignSelf: 'center',
               }}
               buttonStyle={{
                 backgroundColor: GlobalColors.LightBlack,
                 width: '90%',
+                justifyContent: 'center',
+                alignSelf: 'center',
                 height: '18%',
                 borderRadius: 16,
               }}

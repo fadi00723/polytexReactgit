@@ -49,12 +49,22 @@ export default function ScanProgress({route}) {
           {playpause ? (
             <Image
               source={require('../../../assets/icons/pauseActiveIcon.png')}
-              style={{width: 75, height: 75, marginHorizontal: '2%'}}
+              style={{
+                width: 60,
+                height: 60,
+                marginHorizontal: '2%',
+                right: '60%',
+              }}
             />
           ) : (
             <Image
               source={require('../../../assets/icons/playActiveIcon.png')}
-              style={{width: 75, height: 75, marginHorizontal: '2%'}}
+              style={{
+                width: 60,
+                height: 60,
+                marginHorizontal: '2%',
+                right: '60%',
+              }}
             />
           )}
         </Pressable>
@@ -62,7 +72,7 @@ export default function ScanProgress({route}) {
           {playpause ? (
             <Image
               source={require('../../../assets/icons/crossInactiveIcon.png')}
-              style={{width: 75, height: 75, marginHorizontal: '2%'}}
+              style={{width: 60, height: 60, marginHorizontal: '2%'}}
             />
           ) : (
             <Pressable
@@ -71,7 +81,11 @@ export default function ScanProgress({route}) {
               }}>
               <Image
                 source={require('../../../assets/icons/crossActiveIcon.png')}
-                style={{width: 75, height: 75, marginHorizontal: '2%'}}
+                style={{
+                  width: 60,
+                  height: 60,
+                  marginHorizontal: '2%',
+                }}
               />
             </Pressable>
           )}
@@ -80,13 +94,23 @@ export default function ScanProgress({route}) {
           {playpause ? (
             <Image
               source={require('../../../assets/icons/tickInactiveIcon.png')}
-              style={{width: 75, height: 75, marginHorizontal: '2%'}}
+              style={{
+                width: 60,
+                height: 60,
+                marginHorizontal: '2%',
+                left: '70%',
+              }}
             />
           ) : (
             <Pressable onPress={() => setShowModal(true)}>
               <Image
                 source={require('../../../assets/icons/tickActiveIcon.gif')}
-                style={{width: 85, height: 85, marginHorizontal: '2%'}}
+                style={{
+                  width: 70,
+                  height: 70,
+                  marginHorizontal: '2%',
+                  left: '70%',
+                }}
               />
             </Pressable>
           )}
