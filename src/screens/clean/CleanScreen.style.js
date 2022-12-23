@@ -22,6 +22,12 @@ export default StyleSheet.create({
   hidingH1: {
     fontSize: 20,
     color: GlobalColors.white,
+    fontFamily: 'Montserrat- Bold',
+  },
+  mainHiding: {
+    color: GlobalColors.lightGrey,
+    fontSize: 23,
+    fontFamily: 'Montserrat-Medium',
   },
   centeredView: {
     justifyContent: 'center',
@@ -39,11 +45,14 @@ export default StyleSheet.create({
   },
   hidingh2: {
     color: GlobalColors.lightGrey,
+    fontFamily: 'Montserrat-Medium',
+    fontWeight: '500',
   },
   hidingh3: {
     color: GlobalColors.white,
-    fontWeight: '400',
+    fontWeight: '700',
     lineHeight: 41,
+    fontFamily: 'Montserrat-Bold',
     right: 25,
   },
   backIcon: {
