@@ -107,7 +107,7 @@ export default function SettingScreen() {
               style={styles.backIcon}
             />
           </Pressable>
-          <Text style={styles.hidingH1}>{strings.SETTINGS}</Text>
+          <Text style={styles.mainHiding}>{strings.SETTINGS}</Text>
           <View style={{width: 30, height: 30}} />
         </View>
         <View style={{height: 65}} />
@@ -173,7 +173,13 @@ export default function SettingScreen() {
                       style={{width: 30, height: 30}}
                       source={require('../../../assets/icons/English.png')}
                     />
-                    <Text style={styles.txtH1}>{strings.ENGLISH}</Text>
+                    {lang == 'en' ? (
+                      <Text style={styles.txtH1Selected}>
+                        {strings.ENGLISH}
+                      </Text>
+                    ) : (
+                      <Text style={styles.txtH1}>{strings.ENGLISH}</Text>
+                    )}
                   </View>
                 </TouchableOpacity>
                 <View
@@ -191,7 +197,11 @@ export default function SettingScreen() {
                       style={{width: 30, height: 30, borderRadius: 15}}
                       source={require('../../../assets/icons/PortugueseIcon.png')}
                     />
-                    <Text style={styles.txtH1}>Portuguese</Text>
+                    {lang == 'pt' ? (
+                      <Text style={styles.txtH1Selected}>Portuguese</Text>
+                    ) : (
+                      <Text style={styles.txtH1}>Portuguese</Text>
+                    )}
                   </View>
                 </TouchableOpacity>
               </View>
