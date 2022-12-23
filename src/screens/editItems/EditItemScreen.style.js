@@ -22,7 +22,9 @@ export default StyleSheet.create({
   hidingH1: {
     fontSize: 20,
     textAlign: 'center',
+    width: '60%',
     color: GlobalColors.lightGrey,
+    fontFamily: 'Montserrat- Bold',
   },
   centeredView: {
     justifyContent: 'center',

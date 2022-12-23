@@ -46,6 +46,11 @@ export default StyleSheet.create({
     lineHeight: 41,
     right: 25,
   },
+  mainHiding: {
+    color: GlobalColors.lightGrey,
+    fontSize: 23,
+    fontFamily: 'Montserrat-Medium',
+  },
   backIcon: {
     width: 30,
     height: 30,

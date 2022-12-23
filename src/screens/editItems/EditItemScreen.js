@@ -27,7 +27,7 @@ export default function EditItem() {
               style={styles.backIcon}
             />
           </Pressable>
-          <Text style={styles.hidingH1}>Choose Item type to Add/Edit</Text>
+          <Text style={styles.hidingH1}>Choose item type to Add/Edit</Text>
           <View style={{width: 18, height: 95}} />
         </View>
         <View>

@@ -38,7 +38,7 @@ export default function AdvanceSettingsLast() {
               style={styles.backIcon}
             />
           </Pressable>
-          <Text style={styles.hidingH1}>Advanced Settings</Text>
+          <Text style={styles.mainHiding}>Advanced Settings</Text>
           <View style={{width: 30, height: 30}} />
         </View>
         <View style={styles.centeredView}>

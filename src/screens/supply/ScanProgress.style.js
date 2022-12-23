@@ -39,6 +39,16 @@ export default StyleSheet.create({
     top: '100%',
     padding: '5%',
   },
+  modalView: {
+    width: ScreenSize.screenWidth * 0.85,
+    height: ScreenSize.screenHeight * 0.1,
+    flexDirection: 'row',
+    backgroundColor: GlobalColors.LightBlack,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 100,
+    top: '100%',
+  },
   hidingh2: {
     color: GlobalColors.lightGrey,
   },

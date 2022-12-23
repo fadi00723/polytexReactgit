@@ -26,6 +26,11 @@ export default StyleSheet.create({
     fontSize: 20,
     color: GlobalColors.lightGrey,
   },
+  mainHiding: {
+    color: GlobalColors.lightGrey,
+    fontSize: 23,
+    fontFamily: 'Montserrat-Medium',
+  },
   centeredView: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -108,6 +113,13 @@ export default StyleSheet.create({
     fontWeight: '600',
     color: GlobalColors.white,
     marginLeft: '5%',
+    fontFamily: 'Montserrat-SemiBold',
+  },
+  txtH1Selected: {
+    fontSize: 18,
+    color: GlobalColors.white,
+    marginLeft: '5%',
+    fontFamily: 'Montserrat-Bold',
   },
   line: {
     borderBottomColor: GlobalColors.lightGrey,

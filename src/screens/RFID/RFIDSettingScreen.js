@@ -41,7 +41,7 @@ export default function RFIDSettingScreen() {
               style={styles.backIcon}
             />
           </Pressable>
-          <Text style={styles.hidingH1}>RFID Settings</Text>
+          <Text style={styles.mainHiding}>RFID Settings</Text>
           <View style={{width: 30, height: 30}} />
         </View>
         <View style={styles.centeredView}>
@@ -60,6 +60,7 @@ export default function RFIDSettingScreen() {
               buttonTextStyle={{
                 color: 'white',
                 backgroundColor: GlobalColors.LightBlack,
+                fontFamily: 'Montserrat-Bold',
               }}
               buttonStyle={{
                 backgroundColor: GlobalColors.LightBlack,
@@ -144,8 +145,15 @@ export default function RFIDSettingScreen() {
               borderRadius: 12,
             }}>
             <View style={{flexDirection: 'row', top: '32%', left: '20%'}}>
-              <Text style={{fontSize: 20, fontWeight: '500', color: '#212121'}}>
-                Total:0
+              <Text
+                style={{
+                  fontSize: 20,
+                  fontWeight: '500',
+                  color: '#212121',
+                  fontFamily: 'Montserrat-Medium',
+                }}>
+                Total:{' '}
+                <Text style={{fontFamily: 'Montserrat-SemiBold'}}>0</Text>
               </Text>
               <Text
                 style={{
@@ -153,8 +161,10 @@ export default function RFIDSettingScreen() {
                   fontWeight: '500',
                   color: '#212121',
                   left: 23,
+                  fontFamily: 'Montserrat-Medium',
                 }}>
-                Unique:0
+                Unique:
+                <Text style={{fontFamily: 'Montserrat-SemiBold'}}>0</Text>
               </Text>
             </View>
           </View>

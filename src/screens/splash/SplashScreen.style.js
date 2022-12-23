@@ -8,7 +8,7 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   appIcon: {
-    width: 250,
-    height: 70,
+    width: '70%',
+    height: '9.5%',
   },
 });

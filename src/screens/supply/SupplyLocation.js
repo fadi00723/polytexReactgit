@@ -49,7 +49,7 @@ export default function SupplyLocation({route}) {
             />
           </Pressable>
           {type == 'Edit' ? (
-            <Text style={styles.hidingH1}>Add/Edit</Text>
+            <Text style={styles.mainHiding}>Add/Edit</Text>
           ) : (
             <Text style={styles.mainHiding}>Choose Location</Text>
           )}

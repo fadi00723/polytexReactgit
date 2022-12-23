@@ -18,7 +18,16 @@ export default StyleSheet.create({
     width: '70%',
     alignSelf: 'center',
   },
-  dropdown1RowTxtStyle: {color: 'white', textAlign: 'center'},
+  mainHiding: {
+    color: GlobalColors.lightGrey,
+    fontSize: 23,
+    fontFamily: 'Montserrat-Medium',
+  },
+  dropdown1RowTxtStyle: {
+    color: 'white',
+    textAlign: 'center',
+    fontFamily: 'Montserrat-Light',
+  },
   innerView: {
     backgroundColor: GlobalColors.mainBlue,
     flex: 1,
@@ -81,6 +90,7 @@ export default StyleSheet.create({
   hidingH5: {
     fontSize: 20,
     color: GlobalColors.white,
+    fontFamily: 'Montserrat-Medium',
   },
   btnView: {
     flexDirection: 'row',
@@ -91,12 +101,14 @@ export default StyleSheet.create({
     fontSize: 20,
     color: GlobalColors.white,
     alignSelf: 'center',
+    fontFamily: 'Montserrat-Medium',
   },
 
   hidingH7: {
     fontSize: 15,
     color: GlobalColors.white,
     alignSelf: 'center',
+    fontFamily: 'Montserrat-SemiBold',
   },
   backIcon: {
     width: 30,

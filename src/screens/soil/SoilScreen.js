@@ -47,7 +47,7 @@ export default function SoilScreen() {
               style={styles.backIcon}
             />
           </Pressable>
-          <Text style={styles.hidingH1}>Soil</Text>
+          <Text style={styles.mainHiding}>Soil</Text>
           <View style={{width: 30, height: 30}} />
         </View>
         <View style={styles.centeredView}>

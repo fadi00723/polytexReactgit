@@ -27,6 +27,11 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  mainHiding: {
+    color: GlobalColors.lightGrey,
+    fontSize: 23,
+    fontFamily: 'Montserrat-Medium',
+  },
   mainModal: {
     backgroundColor: GlobalColors.darkBlue,
     width: ScreenSize.screenWidth * 0.9,
@@ -47,11 +52,18 @@ export default StyleSheet.create({
     right: 25,
   },
   hidingh4: {
-    color: GlobalColors.white,
-    fontWeight: 'bold',
+    color: GlobalColors.lightGrey,
+    fontFamily: 'Montserrat-Medium',
     fontSize: 20,
     lineHeight: 41,
     paddingBottom: '10%',
+  },
+  someTxt: {
+    color: GlobalColors.lightGrey,
+    fontFamily: 'Montserrat-Medium',
+    fontSize: 20,
+    lineHeight: 41,
+    paddingBottom: '4%',
   },
   backIcon: {
     width: 30,

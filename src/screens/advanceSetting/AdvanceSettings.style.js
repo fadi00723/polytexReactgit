@@ -31,6 +31,13 @@ export default StyleSheet.create({
     alignItems: 'center',
     paddingTop: '20%',
   },
+  mainHiding: {
+    color: GlobalColors.lightGrey,
+    fontSize: 23,
+    fontFamily: 'Montserrat-Medium',
+    width: '70%',
+    textAlign: 'center',
+  },
   centeredviewModal: {
     flex: 1,
     alignItems: 'center',

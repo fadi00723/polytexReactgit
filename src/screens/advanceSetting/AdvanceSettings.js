@@ -121,7 +121,7 @@ export default function AdvanceSettings() {
               style={styles.backIcon}
             />
           </Pressable>
-          <Text style={styles.hidingH1}>Enter Advance Settings</Text>
+          <Text style={styles.mainHiding}>Enter Advance Settings</Text>
           <View style={{width: 30, height: 30}} />
         </View>
         <View style={styles.centeredView}>

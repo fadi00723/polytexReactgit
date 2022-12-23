@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Pressable,
+  TouchableWithoutFeedback,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import CustomHeader from '../../components/CustomHeader/CustomHeader';
@@ -35,19 +36,25 @@ export default function ScanProgress({route}) {
     ['Shirt', 'XL', 85],
     ['Unregistered', '', 15],
   ]);
+
+  showDone &&
+    setTimeout(() => {
+      navigation.navigate('HomeScreen');
+    }, 2000);
+
   const renderModal = () => {
     return (
-      <View style={styles.mainModal}>
+      <View style={styles.modalView}>
         <Pressable onPress={() => setPlayPasue(!playpause)}>
           {playpause ? (
             <Image
               source={require('../../../assets/icons/pauseActiveIcon.png')}
-              style={{width: 60, height: 60}}
+              style={{width: 75, height: 75, marginHorizontal: '2%'}}
             />
           ) : (
             <Image
               source={require('../../../assets/icons/playActiveIcon.png')}
-              style={{width: 60, height: 60}}
+              style={{width: 75, height: 75, marginHorizontal: '2%'}}
             />
           )}
         </Pressable>
@@ -55,7 +62,7 @@ export default function ScanProgress({route}) {
           {playpause ? (
             <Image
               source={require('../../../assets/icons/crossInactiveIcon.png')}
-              style={{width: 60, height: 60}}
+              style={{width: 75, height: 75, marginHorizontal: '2%'}}
             />
           ) : (
             <Pressable
@@ -64,7 +71,7 @@ export default function ScanProgress({route}) {
               }}>
               <Image
                 source={require('../../../assets/icons/crossActiveIcon.png')}
-                style={{width: 60, height: 60}}
+                style={{width: 75, height: 75, marginHorizontal: '2%'}}
               />
             </Pressable>
           )}
@@ -73,13 +80,13 @@ export default function ScanProgress({route}) {
           {playpause ? (
             <Image
               source={require('../../../assets/icons/tickInactiveIcon.png')}
-              style={{width: 60, height: 60}}
+              style={{width: 75, height: 75, marginHorizontal: '2%'}}
             />
           ) : (
             <Pressable onPress={() => setShowModal(true)}>
               <Image
-                source={require('../../../assets/icons/tickActiveIcon.png')}
-                style={{width: 60, height: 60}}
+                source={require('../../../assets/icons/tickActiveIcon.gif')}
+                style={{width: 85, height: 85, marginHorizontal: '2%'}}
               />
             </Pressable>
           )}
@@ -92,6 +99,8 @@ export default function ScanProgress({route}) {
               ? 'Are you sure you want to discard scanned results?'
               : type == 'Soil'
               ? 'Upload soil items?'
+              : type == 'Clean'
+              ? 'Upload clean items?'
               : 'Received Scan Items'
           }
           onPressConfirm={() => {
@@ -135,19 +144,25 @@ export default function ScanProgress({route}) {
     <View style={styles.mainContainer}>
       <CustomHeader />
       {showDone ? (
-        <View style={styles.innerView}>
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'center',
-              padding: '50%',
-            }}>
-            <Image
-              source={require('../../../assets/icons/doneIcon.gif')}
-              style={{width: 200, height: 200}}
-            />
+        <TouchableWithoutFeedback
+          style={{flex: 1}}
+          onPress={() => {
+            navigation.navigate('HomeScreen');
+          }}>
+          <View style={styles.innerView}>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'center',
+                padding: '50%',
+              }}>
+              <Image
+                source={require('../../../assets/icons/doneIcon.gif')}
+                style={{width: 200, height: 200}}
+              />
+            </View>
           </View>
-        </View>
+        </TouchableWithoutFeedback>
       ) : (
         <View style={styles.innerView}>
           <View
