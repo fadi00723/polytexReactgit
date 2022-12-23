@@ -27,6 +27,7 @@ const CustomModal = ({visible, setShowModal, modalTitle, onPressConfirm}) => {
                 textAlign: 'center',
                 color: GlobalColors.white,
                 bottom: 23,
+                fontFamily: 'Montserrat-Medium',
                 width: '50%',
               }}>
               {modalTitle}

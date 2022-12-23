@@ -47,7 +47,7 @@ export default function CleanScreen() {
               style={styles.backIcon}
             />
           </Pressable>
-          <Text style={styles.hidingH1}>{strings.CLEAN}</Text>
+          <Text style={styles.mainHiding}>{strings.CLEAN}</Text>
           <View style={{width: 30, height: 30}} />
         </View>
         <View style={styles.centeredView}>
@@ -57,7 +57,9 @@ export default function CleanScreen() {
           />
           <TouchableOpacity
             style={styles.circleView}
-            onPress={() => navigation.navigate('ScanProgress')}>
+            onPress={() =>
+              navigation.navigate('ScanProgress', {type: 'Clean'})
+            }>
             <Text style={styles.hidingH1}>{strings.STARTSCAN}</Text>
           </TouchableOpacity>
           {renderModal()}

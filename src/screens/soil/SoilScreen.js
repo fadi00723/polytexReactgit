@@ -57,7 +57,7 @@ export default function SoilScreen() {
           />
           <TouchableOpacity
             style={styles.circleView}
-            onPress={() => navigation.navigate('ScanProgress')}>
+            onPress={() => navigation.navigate('ScanProgress', {type: 'Soil'})}>
             <Text style={styles.hidingH1}>{strings.STARTSCAN}</Text>
           </TouchableOpacity>
           {renderModal()}

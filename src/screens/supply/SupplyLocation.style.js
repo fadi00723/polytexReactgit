@@ -8,6 +8,11 @@ export default StyleSheet.create({
     borderTopRightRadius: 180,
     borderTopLeftRadius: 180,
   },
+  mainHiding: {
+    color: GlobalColors.lightGrey,
+    fontSize: 23,
+    fontFamily: 'Montserrat-Medium',
+  },
   mainContainer: {
     backgroundColor: GlobalColors.darkBlue,
     justifyContent: 'center',

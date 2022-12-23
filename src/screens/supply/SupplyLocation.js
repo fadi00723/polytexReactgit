@@ -51,7 +51,7 @@ export default function SupplyLocation({route}) {
           {type == 'Edit' ? (
             <Text style={styles.hidingH1}>Add/Edit</Text>
           ) : (
-            <Text style={styles.hidingH1}>Choose Location</Text>
+            <Text style={styles.mainHiding}>Choose Location</Text>
           )}
           <View style={{width: 30, height: 30}} />
         </View>
@@ -60,7 +60,9 @@ export default function SupplyLocation({route}) {
           <Text style={styles.hidingH1}>{address}</Text>
           <TouchableOpacity
             style={styles.circleView}
-            onPress={() => navigation.navigate('ScanProgress')}>
+            onPress={() =>
+              navigation.navigate('ScanProgress', {type: 'Supply Location'})
+            }>
             <Text style={styles.hidingH1}>{strings.STARTSCAN}</Text>
           </TouchableOpacity>
           {renderModal()}

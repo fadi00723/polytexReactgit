@@ -110,6 +110,7 @@ export default function SettingScreen() {
           <Text style={styles.hidingH1}>{strings.SETTINGS}</Text>
           <View style={{width: 30, height: 30}} />
         </View>
+        <View style={{height: 65}} />
         <ScrollView contentContainerStyle={styles.centeredView}>
           <CustomButton
             label={strings.LANGUAGE}

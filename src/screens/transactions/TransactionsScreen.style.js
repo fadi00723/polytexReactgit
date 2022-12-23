@@ -20,6 +20,8 @@ export default StyleSheet.create({
     borderTopRightRadius: 50,
   },
   hidingH1: {
+    fontFamily: 'Montserrat-Medium',
+    fontWeight: '500',
     fontSize: 20,
     color: GlobalColors.lightGrey,
   },
@@ -53,6 +55,5 @@ export default StyleSheet.create({
   transIcon: {
     width: 70,
     height: 63,
-    marginBottom: '8%',
   },
 });

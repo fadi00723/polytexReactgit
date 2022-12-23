@@ -20,8 +20,8 @@ export default StyleSheet.create({
     borderTopRightRadius: 50,
   },
   hidingH1: {
-    fontFamily: 'montserrat-medium',
-    fontSize: 30,
+    fontFamily: 'Montserrat-SemiBold',
+    fontSize: 26,
     lineHeight: 51.2,
     color: GlobalColors.lightGrey,
     textAlign: 'center',
@@ -43,10 +43,12 @@ export default StyleSheet.create({
   },
   hidingh2: {
     color: GlobalColors.lightGrey,
+    fontFamily: 'Montserrat-Medium',
   },
   hidingh3: {
     color: GlobalColors.white,
-    fontWeight: '400',
+    fontWeight: '500',
+    fontFamily: 'Montserrat-Medium',
     lineHeight: 41,
     right: 25,
   },

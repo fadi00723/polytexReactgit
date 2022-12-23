@@ -56,5 +56,6 @@ export default StyleSheet.create({
     fontSize: 18,
     fontWeight: '600',
     color: GlobalColors.white,
+    fontFamily: 'Montserrat-SemiBold',
   },
 });

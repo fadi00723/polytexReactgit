@@ -58,7 +58,7 @@ export default function QuickScan() {
               style={styles.backIcon}
             />
           </Pressable>
-          <Text style={styles.hidingH1}>Quick Scan</Text>
+          <Text style={styles.mainHiding}>Quick Scan</Text>
           <View style={{width: 30, height: 30}} />
         </View>
         <View style={styles.centeredView}>
@@ -106,7 +106,7 @@ export default function QuickScan() {
                   color: GlobalColors.orange,
                   bottom: 23,
                   width: '50%',
-                  fontWeight: 'bold',
+                  fontFamily: 'Montserrat-Bold',
                 }}>
                 Oh no,
               </Text>
@@ -116,8 +116,8 @@ export default function QuickScan() {
                   textAlign: 'center',
                   color: GlobalColors.orange,
                   bottom: 23,
-                  width: '70%',
-                  fontWeight: '600',
+                  width: '80%',
+                  fontFamily: 'Montserrat-Bold',
                 }}>
                 no connection to RFID reader
               </Text>
@@ -126,8 +126,9 @@ export default function QuickScan() {
                   fontSize: 18,
                   textAlign: 'center',
                   color: GlobalColors.white,
+                  fontFamily: 'Montserrat-Medium',
                   bottom: 23,
-                  width: '50%',
+                  width: '60%',
                   top: '5 %',
                 }}>
                 Please try to restart the device

@@ -14,6 +14,7 @@ export default StyleSheet.create({
   txtH1: {
     fontSize: 18,
     fontWeight: '600',
+    fontFamily: 'Montserrat-SemiBold',
     color: GlobalColors.white,
   },
   appIcon: {

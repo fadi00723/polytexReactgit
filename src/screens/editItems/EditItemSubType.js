@@ -71,6 +71,7 @@ export default function EditItemSubType({route}) {
             source={require('../../../assets/icons/mapIcon.png')}
             style={styles.mapIcon}
           /> */}
+          <View style={{width: 60, height: 38}} />
           <ScrollView>
             {locations.map(renderButton)}
             <View style={{height: 150}} />

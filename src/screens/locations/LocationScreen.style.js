@@ -13,6 +13,11 @@ export default StyleSheet.create({
     justifyContent: 'center',
     flex: 1,
   },
+  mainHiding: {
+    color: GlobalColors.lightGrey,
+    fontSize: 23,
+    fontFamily: 'Montserrat-Medium',
+  },
   innerView: {
     backgroundColor: GlobalColors.mainBlue,
     flex: 1,
@@ -51,8 +56,7 @@ export default StyleSheet.create({
     height: 30,
   },
   mapIcon: {
-    width: 50,
-    height: 73,
-    marginBottom: '8%',
+    width: 45,
+    height: 65,
   },
 });

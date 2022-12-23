@@ -20,8 +20,9 @@ export default StyleSheet.create({
     borderTopRightRadius: 50,
   },
   hidingH1: {
-    fontSize: 20,
-    color: GlobalColors.white,
+    color: GlobalColors.lightGrey,
+    fontSize: 23,
+    fontFamily: 'Montserrat-Medium',
   },
   centeredView: {
     justifyContent: 'center',
@@ -29,11 +30,11 @@ export default StyleSheet.create({
   },
   mainModal: {
     backgroundColor: GlobalColors.LightBlack,
-    width: ScreenSize.screenWidth * 0.6,
-    height: ScreenSize.screenHeight * 0.08,
+    width: ScreenSize.screenWidth * 0.85,
+    height: ScreenSize.screenHeight * 0.1,
     borderRadius: 100,
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     flexDirection: 'row',
     top: '100%',
     padding: '5%',
@@ -83,7 +84,8 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   txtH1: {
-    fontSize: 18,
+    fontSize: 20,
+    fontFamily: 'Montserrat-SemiBold',
     fontWeight: '600',
     color: GlobalColors.white,
   },
@@ -99,7 +101,8 @@ export default StyleSheet.create({
   },
   head: {
     height: 40,
-    backgroundColor: GlobalColors.mainBlue,
+    backgroundColor: GlobalColors.darkBlue,
+    borderRadius: 8,
   },
   wrapper: {
     flexDirection: 'row',
@@ -110,11 +113,19 @@ export default StyleSheet.create({
   },
   row: {
     height: 28,
-    backgroundColor: 'black',
+    borderBottomColor: GlobalColors.lightGrey,
+    borderBottomWidth: 0.5,
+    // backgroundColor: 'black',
   },
   text: {
+    color: GlobalColors.lightGrey,
+    fontFamily: 'Montserrat-SemiBold',
+    textAlign: 'center',
+    backgroundColor: '',
+  },
+  text2: {
     color: GlobalColors.white,
-    fontWeight: 'bold',
+    fontFamily: 'Montserrat-Medium',
     textAlign: 'center',
   },
 });

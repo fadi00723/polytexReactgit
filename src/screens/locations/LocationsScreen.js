@@ -62,7 +62,7 @@ export default function LocationScreen() {
               style={styles.backIcon}
             />
           </Pressable>
-          <Text style={styles.hidingH1}>Choose Location</Text>
+          <Text style={styles.mainHiding}>Choose Locations</Text>
           <View style={{width: 30, height: 30}} />
         </View>
         <View style={styles.centeredView}>

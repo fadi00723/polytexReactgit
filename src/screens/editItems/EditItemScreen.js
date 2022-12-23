@@ -28,50 +28,41 @@ export default function EditItem() {
             />
           </Pressable>
           <Text style={styles.hidingH1}>Choose Item type to Add/Edit</Text>
-          <View style={{width: 30, height: 30}} />
+          <View style={{width: 18, height: 95}} />
         </View>
         <View>
-          <View style={styles.centeredView}>
-            <TouchableOpacity
-              style={styles.containerbtn}
-              onPress={() =>
-                navigation.navigate('EditItemSubType', {
-                  items: 'T-shirts',
-                })
-              }>
-              <Text style={styles.txtH1}>T-shirts</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.containerbtn}
-              onPress={() =>
-                navigation.navigate('EditItemSubType', {
-                  items: 'Pants',
-                })
-              }>
-              <Text style={styles.txtH1}>Pants</Text>
-            </TouchableOpacity>
-          </View>
-
-          <View style={styles.centeredView}>
-            <TouchableOpacity
-              style={styles.containerbtn}
-              onPress={() =>
-                navigation.navigate('EditItemSubType', {
-                  items: 'Blanket',
-                })
-              }>
-              <Text style={styles.txtH1}>Blanket</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.containerbtn}
-              onPress={() =>
-                navigation.navigate('EditItemSubType', {
-                  items: 'Blue & White pents',
-                })
-              }>
-              <Text style={styles.txtH1}>Blue & White pents</Text>
-            </TouchableOpacity>
-          </View>
+          <CustomButton
+            label={'T-shirt'}
+            onPress={() =>
+              navigation.navigate('EditItemSubType', {
+                items: 'T-shirts',
+              })
+            }
+          />
+          <CustomButton
+            label={'Pants'}
+            onPress={() =>
+              navigation.navigate('EditItemSubType', {
+                items: 'Pants',
+              })
+            }
+          />
+          <CustomButton
+            label={'Blanket'}
+            onPress={() =>
+              navigation.navigate('EditItemSubType', {
+                items: 'Blanket',
+              })
+            }
+          />
+          <CustomButton
+            label={'Blue & White pents'}
+            onPress={() =>
+              navigation.navigate('EditItemSubType', {
+                items: 'Blue & White pents',
+              })
+            }
+          />
         </View>
       </View>
     </View>
