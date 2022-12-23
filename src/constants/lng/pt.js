@@ -7,7 +7,7 @@ export default {
   DEVICEDETAILS: 'Detalhes do dispositivo',
   ADVANCEDSETTINGS: 'Configurações avançadas',
   SETTINGS: 'Definições',
-  SETTINGS: 'Settings',
+  SETTINGS: 'Contexto',
   FULLCYCLESOLUTION: 'Solução de ciclo completo',
   TRANSACTIONS: 'TRANSAÇÕES',
   ADDEDITITEMS: 'ADICIONAR/EDITAR ITENS',
