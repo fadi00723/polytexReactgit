@@ -18,6 +18,7 @@ import AdvanceSettings from '../screens/advanceSetting/AdvanceSettings';
 import AdvanceSettingsLast from '../screens/advanceSettingLast/AdvanceSettingsLast';
 import QuickScan from '../screens/quickScan/QuickScan';
 import EditItemSubType from '../screens/editItems/EditItemSubType';
+import DeleteFTT from '../screens/deleteFTT/DeleteFTT';
 
 const Stack = createNativeStackNavigator();
 
@@ -45,6 +46,7 @@ export default function StackNavigations() {
       <Stack.Screen name="AdvanceSettings" component={AdvanceSettings} />
       <Stack.Screen name="QuickScan" component={QuickScan} />
       <Stack.Screen name="EditItemSubType" component={EditItemSubType} />
+      <Stack.Screen name="DeleteFTT" component={DeleteFTT} />
       <Stack.Screen
         name="AdvanceSettingsLast"
         component={AdvanceSettingsLast}

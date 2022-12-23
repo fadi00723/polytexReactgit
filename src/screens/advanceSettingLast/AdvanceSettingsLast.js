@@ -68,6 +68,7 @@ export default function AdvanceSettingsLast() {
               modalTitle={'Are you sure you want to delete FTT?'}
               onPressConfirm={() => {
                 setShowModal(false);
+                navigation.navigate('DeleteFTT');
               }}
             />
           )}
