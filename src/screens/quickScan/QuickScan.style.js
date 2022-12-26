@@ -57,7 +57,6 @@ export default StyleSheet.create({
   },
   hidingh3: {
     color: GlobalColors.white,
-    fontWeight: '700',
     lineHeight: 41,
     fontFamily: 'Montserrat-Bold',
     right: 25,
