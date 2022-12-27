@@ -25,9 +25,9 @@ export default StyleSheet.create({
     borderTopRightRadius: 50,
   },
   hidingH1: {
-    fontSize: 20,
+    fontSize: 23,
     color: GlobalColors.white,
-    fontFamily: 'Montserrat- Bold',
+    fontFamily: 'Montserrat-SemiBold',
   },
   centeredView: {
     justifyContent: 'center',
@@ -69,12 +69,12 @@ export default StyleSheet.create({
     marginBottom: '8%',
   },
   circleView: {
-    width: 250,
-    height: 250,
+    width: 300,
+    height: 300,
     backgroundColor: GlobalColors.darkOrange,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 500,
-    top: '30%',
+    borderRadius: 150,
+    top: '10%',
   },
 });

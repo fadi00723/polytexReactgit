@@ -63,7 +63,8 @@ export default StyleSheet.create({
   },
   head: {
     height: 40,
-    backgroundColor: GlobalColors.mainBlue,
+    backgroundColor: GlobalColors.darkBlue,
+    borderRadius: 8,
   },
   wrapper: {
     flexDirection: 'row',
@@ -73,12 +74,19 @@ export default StyleSheet.create({
     backgroundColor: GlobalColors.mainBlue,
   },
   row: {
-    height: 90,
+    height: 100,
+    borderBottomColor: GlobalColors.lightGrey,
+    borderBottomWidth: 0.5,
     // backgroundColor: 'black',
   },
   text: {
+    color: GlobalColors.lightGrey,
+    fontFamily: 'Montserrat-SemiBold',
+    textAlign: 'center',
+  },
+  text2: {
     color: GlobalColors.white,
-    fontWeight: 'bold',
+    fontFamily: 'Montserrat-Medium',
     textAlign: 'center',
   },
 });

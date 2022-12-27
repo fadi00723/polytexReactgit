@@ -23,7 +23,7 @@ import CustomModal from '../../components/CustomModal/CustomModal';
 
 export default function ScanProgress({route}) {
   useEffect(() => {
-    console.log('type', type);
+    console.log('type', type, location);
   });
   const [playpause, setPlayPasue] = useState(true);
   const [showModal, setShowModal] = useState(false);
@@ -39,7 +39,9 @@ export default function ScanProgress({route}) {
 
   showDone &&
     setTimeout(() => {
-      navigation.navigate('HomeScreen');
+      location == '' || location == undefined
+        ? navigation.navigate('HomeScreen')
+        : navigation.navigate('LocationScreen');
     }, 2000);
 
   const renderModal = () => {
@@ -102,12 +104,15 @@ export default function ScanProgress({route}) {
               }}
             />
           ) : (
-            <Pressable onPress={() => setShowModal(true)}>
+            <Pressable
+              onPress={() => {
+                setShowDiscard(false), setShowModal(true);
+              }}>
               <Image
                 source={require('../../../assets/icons/tickActiveIcon.gif')}
                 style={{
-                  width: 70,
-                  height: 70,
+                  width: 65,
+                  height: 65,
                   marginHorizontal: '2%',
                   left: '70%',
                 }}
@@ -125,10 +130,17 @@ export default function ScanProgress({route}) {
               ? 'Upload soil items?'
               : type == 'Clean'
               ? 'Upload clean items?'
+              : type == 'Supply Location'
+              ? 'Supply scanned items to: ' + location
               : 'Received Scan Items'
           }
           onPressConfirm={() => {
-            setShowModal(false), setShowDone(true);
+            console.log('confirm Pressed');
+            if (showDiscard) {
+              setShowModal(false), setTableTitle(['']), setTableData(['']);
+            } else {
+              setShowModal(false), setShowDone(true);
+            }
           }}
         />
       </View>
@@ -163,7 +175,7 @@ export default function ScanProgress({route}) {
     );
   };
   const navigation = useNavigation();
-  const {type} = route.params;
+  const {type, location} = route.params;
   return (
     <View style={styles.mainContainer}>
       <CustomHeader />
@@ -209,12 +221,12 @@ export default function ScanProgress({route}) {
               {type == 'Clean'
                 ? 'Clean'
                 : type == 'Supply Location'
-                ? 'Supply Location'
+                ? 'Supply To ' + location
                 : type == 'Soil'
                 ? 'Soil'
                 : 'Wash Received'}
             </Text>
-            <View style={{height: 30, width: 30}} />
+            <View style={{height: 20, width: 20}} />
           </View>
           <View style={styles.centeredView}>
             {playpause ? (

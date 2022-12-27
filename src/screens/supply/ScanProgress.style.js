@@ -131,7 +131,6 @@ export default StyleSheet.create({
     color: GlobalColors.lightGrey,
     fontFamily: 'Montserrat-SemiBold',
     textAlign: 'center',
-    backgroundColor: '',
   },
   text2: {
     color: GlobalColors.white,

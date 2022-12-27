@@ -14,7 +14,11 @@ import {
 import GlobalColors from '../../utils/GlobalColors';
 
 export default function AlertScreen() {
-  const [tableHead, setTableHead] = useState(['Time', 'Alert ID', 'More Info']);
+  const [tableHead, setTableHead] = useState([
+    'Time',
+    'Alert ID',
+    'Extra data',
+  ]);
   const [tableTitle, setTableTitle] = useState(['1', '2']);
   const [tableData, setTableData] = useState([
     ['20/11/2022 12:17', '0x6506', 'There is no connection to the RFID reader'],
@@ -22,8 +26,7 @@ export default function AlertScreen() {
   const renderTable = () => {
     return (
       <View style={styles.containerTable}>
-        <Table
-          borderStyle={{borderWidth: 1, borderColor: GlobalColors.lightGrey}}>
+        <Table>
           <Row
             data={tableHead}
             flexArr={[2, 2, 2]}
@@ -41,7 +44,7 @@ export default function AlertScreen() {
               data={tableData}
               flexArr={[1, 1, 1]}
               style={styles.row}
-              textStyle={styles.text}
+              textStyle={styles.text2}
             />
           </TableWrapper>
         </Table>
