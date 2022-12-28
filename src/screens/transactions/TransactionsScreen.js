@@ -33,7 +33,7 @@ export default function TransactionsScreen() {
         </View>
         <View style={styles.centeredView}>
           <Image
-            source={require('../../../assets/icons/transactionIcon.png')}
+            source={require('../../../assets/icons/transactionsIcon.png')}
             style={styles.transIcon}
           />
           <CustomButton

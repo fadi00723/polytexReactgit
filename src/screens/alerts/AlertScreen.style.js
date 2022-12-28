@@ -1,6 +1,8 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import GlobalColors from '../../utils/GlobalColors';
 import ScreenSize from '../../utils/ScreenSize';
+const width = Dimensions.get('window').width;
+const height = Dimensions.get('window').height;
 export default StyleSheet.create({
   container: {
     flex: 1,
@@ -26,6 +28,27 @@ export default StyleSheet.create({
   centeredView: {
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  btntext: {
+    fontFamily: 'Montserrat-Bold',
+    color: 'white',
+    fontSize: 10,
+  },
+  dateText: {
+    fontFamily: 'Montserrat-Light',
+    color: GlobalColors.white,
+    fontSize: 12,
+    paddingLeft: '4%',
+  },
+  alertText: {
+    fontFamily: 'Montserrat-Light',
+    color: GlobalColors.white,
+    fontSize: 12,
+  },
+  timeText: {
+    fontFamily: 'Montserrat-Bold',
+    color: 'white',
+    fontSize: 12,
   },
   mainModal: {
     backgroundColor: GlobalColors.darkBlue,
@@ -88,5 +111,57 @@ export default StyleSheet.create({
     color: GlobalColors.white,
     fontFamily: 'Montserrat-Medium',
     textAlign: 'center',
+  },
+  text3: {
+    color: GlobalColors.white,
+    fontFamily: 'Montserrat-Medium',
+    textAlign: 'center',
+    bottom: '5%',
+  },
+  modalView: {
+    width: width * 0.9,
+    height: height * 0.45,
+    alignContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    backgroundColor: GlobalColors.mainBlue,
+    borderRadius: 10,
+    shadowColor: 'black',
+    shadowOffset: {
+      width: 0,
+      height: 11,
+    },
+    shadowOpacity: 0.57,
+    shadowRadius: 15.19,
+    elevation: 23,
+  },
+  containerBtn: {
+    backgroundColor: GlobalColors.orange,
+    borderRadius: 16,
+    width: ScreenSize.screenWidth * 0.75,
+    height: ScreenSize.screenHeight * 0.08,
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '5%',
+  },
+  containerBtnCancel: {
+    backgroundColor: GlobalColors.LightBlack,
+    borderRadius: 16,
+    width: ScreenSize.screenWidth * 0.75,
+    height: ScreenSize.screenHeight * 0.08,
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '5%',
+  },
+  centeredview: {
+    flex: 1,
+    alignItems: 'center',
+    backgroundColor: GlobalColors.LightBlack,
+    justifyContent: 'center',
+  },
+  warningIcon: {
+    width: 68,
+    height: 68,
+    marginVertical: '15%',
   },
 });

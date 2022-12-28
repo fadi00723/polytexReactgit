@@ -73,7 +73,7 @@ export default StyleSheet.create({
     backgroundColor: GlobalColors.darkOrange,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 500,
+    borderRadius: 125,
     top: '30%',
   },
 

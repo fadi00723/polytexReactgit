@@ -48,7 +48,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-evenly',
     flexDirection: 'row',
-    top: '45%',
+    top: '50%',
   },
   hidingh2: {
     color: GlobalColors.lightGrey,
@@ -71,12 +71,12 @@ export default StyleSheet.create({
     marginBottom: '8%',
   },
   circleView: {
-    width: 300,
-    height: 300,
+    width: 250,
+    height: 250,
     backgroundColor: GlobalColors.darkOrange,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 150,
+    borderRadius: 125,
     top: '10%',
   },
   transIcon: {
