@@ -51,7 +51,7 @@ export default function AlertScreen() {
             borderRadius: 23,
             alignItems: 'center',
             justifyContent: 'center',
-            left: 20,
+            left: 12,
             backgroundColor: GlobalColors.darkOrange,
           }}
           onPress={() => setShowModal(true)}>

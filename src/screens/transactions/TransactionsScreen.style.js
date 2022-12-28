@@ -53,7 +53,7 @@ export default StyleSheet.create({
     height: 30,
   },
   transIcon: {
-    width: 60,
-    height: 81,
+    width: 46,
+    height: 62,
   },
 });

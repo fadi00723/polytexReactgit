@@ -6,7 +6,7 @@ import GlobalColors from './src/utils/GlobalColors';
 import SystemNavigationBar from 'react-native-system-navigation-bar';
 
 export default function App() {
-  SystemNavigationBar.immersive();
+  SystemNavigationBar.stickyImmersive();
   return (
     <NavigationContainer>
       <StatusBar hidden backgroundColor={GlobalColors.darkBlue} />

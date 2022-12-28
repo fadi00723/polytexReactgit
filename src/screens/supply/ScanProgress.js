@@ -52,8 +52,8 @@ export default function ScanProgress({route}) {
             <Image
               source={require('../../../assets/icons/pauseActiveIcon.png')}
               style={{
-                width: 60,
-                height: 60,
+                width: 55,
+                height: 55,
                 marginHorizontal: '2%',
                 right: '60%',
               }}
@@ -62,8 +62,8 @@ export default function ScanProgress({route}) {
             <Image
               source={require('../../../assets/icons/playActiveIcon.png')}
               style={{
-                width: 60,
-                height: 60,
+                width: 55,
+                height: 55,
                 marginHorizontal: '2%',
                 right: '60%',
               }}
@@ -74,7 +74,7 @@ export default function ScanProgress({route}) {
           {playpause ? (
             <Image
               source={require('../../../assets/icons/crossInactiveIcon.png')}
-              style={{width: 60, height: 60, marginHorizontal: '2%'}}
+              style={{width: 55, height: 55, marginHorizontal: '2%'}}
             />
           ) : (
             <Pressable
@@ -84,8 +84,8 @@ export default function ScanProgress({route}) {
               <Image
                 source={require('../../../assets/icons/crossActiveIcon.png')}
                 style={{
-                  width: 60,
-                  height: 60,
+                  width: 55,
+                  height: 55,
                   marginHorizontal: '2%',
                 }}
               />
@@ -97,8 +97,8 @@ export default function ScanProgress({route}) {
             <Image
               source={require('../../../assets/icons/tickInactiveIcon.png')}
               style={{
-                width: 60,
-                height: 60,
+                width: 55,
+                height: 55,
                 marginHorizontal: '2%',
                 left: '70%',
               }}
@@ -111,8 +111,8 @@ export default function ScanProgress({route}) {
               <Image
                 source={require('../../../assets/icons/tickActiveIcon.gif')}
                 style={{
-                  width: 65,
-                  height: 65,
+                  width: 55,
+                  height: 55,
                   marginHorizontal: '2%',
                   left: '70%',
                 }}

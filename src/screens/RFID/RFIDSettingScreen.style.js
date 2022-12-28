@@ -8,14 +8,10 @@ export default StyleSheet.create({
     borderTopRightRadius: 180,
     borderTopLeftRadius: 180,
   },
-  mainContainer: {
-    backgroundColor: GlobalColors.darkBlue,
-    justifyContent: 'center',
-    flex: 1,
-  },
+
   dropdown1RowStyle: {
     borderBottomColor: '#8798AD',
-    width: '70%',
+    width: '100%',
     alignSelf: 'center',
   },
   mainHiding: {
@@ -74,8 +70,7 @@ export default StyleSheet.create({
   },
   mainContainer: {
     backgroundColor: GlobalColors.darkBlue,
-    justifyContent: 'center',
-    flex: 1,
+    height: '100%',
   },
   innerView: {
     backgroundColor: GlobalColors.mainBlue,
@@ -115,8 +110,8 @@ export default StyleSheet.create({
     height: 30,
   },
   newBtn: {
-    width: 120,
-    height: 70,
+    width: ScreenSize.screenWidth * 0.29,
+    height: ScreenSize.screenHeight * 0.065,
     borderRadius: 16,
     backgroundColor: GlobalColors.LightBlack,
     justifyContent: 'center',

@@ -24,7 +24,7 @@ export default function RFIDSettingScreen() {
   return (
     <View style={styles.mainContainer}>
       <CustomHeader />
-      <View style={styles.innerView}>
+      <ScrollView style={styles.innerView}>
         <View
           style={{
             flexDirection: 'row',
@@ -44,6 +44,12 @@ export default function RFIDSettingScreen() {
           <Text style={styles.mainHiding}>RFID Settings</Text>
           <View style={{width: 30, height: 30}} />
         </View>
+        <ScrollView
+          contentContainerStyle={{
+            justifyContent: 'center',
+            alignContent: 'center',
+          }}></ScrollView>
+
         <View style={styles.centeredView}>
           <Text style={styles.hidingH5}>Select Frequency area:</Text>
           <View style={{paddingTop: '3%'}}>
@@ -71,7 +77,7 @@ export default function RFIDSettingScreen() {
                 width: '90%',
                 justifyContent: 'center',
                 alignSelf: 'center',
-                height: '18%',
+                height: '15%',
                 borderRadius: 16,
               }}
               renderDropdownIcon={isOpened => {
@@ -175,9 +181,11 @@ export default function RFIDSettingScreen() {
             </View>
           </View>
         </View>
+
         <CustomButton label={'SAVE'} onPress={() => navigation.goBack()} />
-        <View style={{height: '20%'}} />
-      </View>
+        <CustomButton />
+        <CustomButton />
+      </ScrollView>
     </View>
   );
 }

@@ -29,13 +29,13 @@ export default function DeviceDetailScreen() {
           <View style={{width: 30, height: 30}} />
         </View>
         <View style={styles.viewNew}>
-          <Text style={styles.hidingh4}>Device id</Text>
-          <Text style={styles.hidingh4}>Site name</Text>
-          <Text style={styles.hidingh4}>Device MAC address</Text>
-          <Text style={styles.hidingh4}>Device IP address</Text>
-          <Text style={styles.hidingh4}>Web server name</Text>
-          <Text style={styles.hidingh4}>Application version</Text>
-          <Text style={styles.hidingh4}>Hardware model</Text>
+          <Text style={styles.hidingh4}>DEVICE ID</Text>
+          <Text style={styles.hidingh4}>SITE NAME</Text>
+          <Text style={styles.hidingh4}>DEVICE MAC ADDRESS</Text>
+          <Text style={styles.hidingh4}>DEVICE IP ADDRESS</Text>
+          <Text style={styles.hidingh4}>WEB SERVER NAME</Text>
+          <Text style={styles.hidingh4}>APPLICATION VERSION</Text>
+          <Text style={styles.hidingh4}>HARDWARE MODEL</Text>
         </View>
       </View>
     </View>

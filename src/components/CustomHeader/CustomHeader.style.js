@@ -6,7 +6,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
-    paddingHorizontal: '27%',
+    paddingHorizontal: '30%',
   },
   appIcon: {
     width: 125,
