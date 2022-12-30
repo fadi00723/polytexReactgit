@@ -24,9 +24,10 @@ export default StyleSheet.create({
     color: GlobalColors.lightGrey,
   },
   hidingH9: {
-    fontSize: 20,
     color: GlobalColors.lightGrey,
-    width: '60%',
+    fontSize: 23,
+    fontFamily: 'Montserrat-Medium',
+    width: '80%',
     textAlign: 'center',
   },
   centeredView: {

@@ -85,6 +85,23 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  containerViewScanned: {
+    top: '120%',
+    backgroundColor: GlobalColors.darkBlue,
+    borderRadius: 62,
+    width: ScreenSize.screenWidth * 0.78,
+    height: ScreenSize.screenHeight * 0.09,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  containerViewScannedStopped: {
+    backgroundColor: GlobalColors.lightGrey,
+    borderRadius: 62,
+    width: ScreenSize.screenWidth * 0.78,
+    height: ScreenSize.screenHeight * 0.06,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   containerViewStopped: {
     backgroundColor: GlobalColors.lightGrey,
     borderRadius: 62,

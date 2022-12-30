@@ -5,6 +5,7 @@ import {
   Pressable,
   TouchableOpacity,
   ScrollView,
+  Dimensions,
 } from 'react-native';
 import React, {useState} from 'react';
 import CustomHeader from '../../components/CustomHeader/CustomHeader';
@@ -14,6 +15,8 @@ import {useNavigation} from '@react-navigation/native';
 import SelectDropdown from 'react-native-select-dropdown';
 import GlobalColors from '../../utils/GlobalColors';
 import Slider from '@react-native-community/slider';
+const height = Dimensions.get('screen').height;
+
 const countries = ['RG_EU3', 'RG_EU32', 'RG_NA'];
 
 export default function RFIDSettingScreen() {
@@ -156,7 +159,8 @@ export default function RFIDSettingScreen() {
               backgroundColor: GlobalColors.skyBlue,
               borderRadius: 12,
             }}>
-            <View style={{flexDirection: 'row', top: '32%', left: '20%'}}>
+            <View
+              style={{flexDirection: 'row', top: height * 0.123, left: '20%'}}>
               <Text
                 style={{
                   fontSize: 20,

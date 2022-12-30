@@ -23,7 +23,7 @@ import CustomModal from '../../components/CustomModal/CustomModal';
 
 export default function ScanProgress({route}) {
   useEffect(() => {
-    console.log('type', type, location);
+    console.log('type', type, location, items);
   });
   const [playpause, setPlayPasue] = useState(true);
   const [showModal, setShowModal] = useState(false);
@@ -41,6 +41,8 @@ export default function ScanProgress({route}) {
     setTimeout(() => {
       location == '' || location == undefined
         ? navigation.navigate('HomeScreen')
+        : type == 'Edit'
+        ? navigation.navigate('EditItems')
         : navigation.navigate('LocationScreen');
     }, 2000);
 
@@ -131,7 +133,7 @@ export default function ScanProgress({route}) {
               : type == 'Clean'
               ? 'Upload clean items?'
               : type == 'Supply Location'
-              ? 'Supply scanned items to: ' + location
+              ? 'Supply scanned items to: ' + location + '?'
               : 'Received Scan Items'
           }
           onPressConfirm={() => {
@@ -174,8 +176,48 @@ export default function ScanProgress({route}) {
       </View>
     );
   };
+  const renderScannedModel = () => {
+    return (
+      <View style={{height: '13%'}}>
+        <View style={styles.containerViewScanned}>
+          <View style={{flexDirection: 'row'}}>
+            <Text
+              style={{
+                fontFamily: 'Montserrat-Light',
+                color: GlobalColors.lightGrey,
+              }}>
+              SCANNED:
+            </Text>
+            <Text style={{fontFamily: 'Montserrat-Bold', color: 'white'}}>
+              {' '}
+              12 items{' '}
+            </Text>
+          </View>
+        </View>
+        <View style={{top: '240%', alignSelf: 'center'}}>
+          <Text
+            style={{
+              fontFamily: 'Montserrat-Bold',
+              color: 'white',
+              fontSize: 19,
+            }}>
+            {items}
+          </Text>
+          <Text
+            style={{
+              fontFamily: 'Montserrat-Bold',
+              color: 'white',
+              fontSize: 19,
+              textAlign: 'center',
+            }}>
+            {location}
+          </Text>
+        </View>
+      </View>
+    );
+  };
   const navigation = useNavigation();
-  const {type, location} = route.params;
+  const {type, location, items} = route.params;
   return (
     <View style={styles.mainContainer}>
       <CustomHeader />
@@ -238,7 +280,7 @@ export default function ScanProgress({route}) {
                 <Text style={styles.txtH1}>Scan Stopped</Text>
               </View>
             )}
-            {renderTable()}
+            {type == 'Edit' ? renderScannedModel() : renderTable()}
             {renderModal()}
           </View>
         </View>

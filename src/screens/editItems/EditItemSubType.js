@@ -64,7 +64,7 @@ export default function EditItemSubType({route}) {
             />
           </Pressable>
           <Text style={styles.hidingH9}>Choose item sub-type to Add/Edit</Text>
-          <View style={{width: 30, height: 30}} />
+          <View style={{width: 18, height: 30}} />
         </View>
         <View style={styles.centeredView}>
           {/* <Image

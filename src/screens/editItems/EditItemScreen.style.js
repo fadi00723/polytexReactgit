@@ -20,11 +20,11 @@ export default StyleSheet.create({
     borderTopRightRadius: 50,
   },
   hidingH1: {
-    fontSize: 20,
-    textAlign: 'center',
-    width: '60%',
     color: GlobalColors.lightGrey,
-    fontFamily: 'Montserrat- Bold',
+    fontSize: 23,
+    fontFamily: 'Montserrat-Medium',
+    width: '80%',
+    textAlign: 'center',
   },
   centeredView: {
     justifyContent: 'center',

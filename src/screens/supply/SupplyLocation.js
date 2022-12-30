@@ -58,11 +58,13 @@ export default function SupplyLocation({route}) {
         <View style={styles.centeredView}>
           <Text style={styles.hidingH1}>{items}</Text>
           <Text style={styles.hidingH1}>{address}</Text>
+          <View style={{height: 50}} />
           <TouchableOpacity
             style={styles.circleView}
             onPress={() =>
               navigation.navigate('ScanProgress', {
-                type: 'Supply Location',
+                type: type,
+                items: items,
                 location: address,
               })
             }>

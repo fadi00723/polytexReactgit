@@ -22,8 +22,9 @@ export default StyleSheet.create({
     borderTopRightRadius: 50,
   },
   hidingH1: {
-    fontSize: 20,
     color: GlobalColors.lightGrey,
+    fontSize: 23,
+    fontFamily: 'Montserrat-Medium',
   },
   centeredView: {
     justifyContent: 'center',
