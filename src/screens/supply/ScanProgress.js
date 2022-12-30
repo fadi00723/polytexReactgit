@@ -262,17 +262,32 @@ export default function ScanProgress({route}) {
                 style={styles.backIcon}
               />
             </Pressable>
-            <Text style={styles.hidingH1}>
-              {type == 'Clean'
-                ? 'Clean'
-                : type == 'Supply Location'
-                ? 'Supply To ' + location
-                : type == 'Soil'
-                ? 'Soil'
-                : type == 'Edit'
-                ? 'Add/Edit '
-                : 'Wash Received'}
-            </Text>
+            <View>
+              <Text style={styles.hidingH1}>
+                {type == 'Clean'
+                  ? 'Clean'
+                  : type == 'Supply Location'
+                  ? 'Supply To ' + location
+                  : type == 'Soil'
+                  ? 'Soil'
+                  : type == 'Edit'
+                  ? 'Add/Edit '
+                  : type == 'Supply To'
+                  ? 'Supply To'
+                  : 'Wash Received'}
+              </Text>
+              {type == 'Supply To' ? (
+                <Text
+                  style={{
+                    textAlign: 'center',
+                    color: 'white',
+                    fontFamily: 'Montserrat-Light',
+                    fontSize: 23,
+                  }}>
+                  {location}
+                </Text>
+              ) : null}
+            </View>
             <View style={{height: 20, width: 20}} />
           </View>
           <View style={styles.centeredView}>

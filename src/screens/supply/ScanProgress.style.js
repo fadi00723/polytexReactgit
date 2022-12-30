@@ -23,6 +23,7 @@ export default StyleSheet.create({
     color: GlobalColors.lightGrey,
     fontSize: 23,
     fontFamily: 'Montserrat-Medium',
+    textAlign: 'center',
   },
   centeredView: {
     justifyContent: 'center',

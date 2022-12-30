@@ -63,7 +63,7 @@ export default function SupplyLocation({route}) {
             style={styles.circleView}
             onPress={() =>
               navigation.navigate('ScanProgress', {
-                type: type,
+                type: type == undefined || type == null ? 'Supply To' : type,
                 items: items,
                 location: address,
               })
