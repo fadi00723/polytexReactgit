@@ -134,6 +134,8 @@ export default function ScanProgress({route}) {
               ? 'Upload clean items?'
               : type == 'Supply Location'
               ? 'Supply scanned items to: ' + location + '?'
+              : type == 'Edit'
+              ? 'Do you want to associate scanned items?'
               : 'Received Scan Items'
           }
           onPressConfirm={() => {
@@ -266,6 +268,8 @@ export default function ScanProgress({route}) {
                 ? 'Supply To ' + location
                 : type == 'Soil'
                 ? 'Soil'
+                : type == 'Edit'
+                ? 'Add/Edit '
                 : 'Wash Received'}
             </Text>
             <View style={{height: 20, width: 20}} />

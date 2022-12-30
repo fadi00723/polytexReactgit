@@ -25,7 +25,7 @@ export default function HomeScreen() {
           source={require('../../../assets/icons/syncIcon.png')}
           style={{width: 35, height: 35}}
         />
-        <Text style={styles.hidingh2}>LAST SYNC:</Text>
+        <Text style={styles.hidingh2}>LAST SYNC: </Text>
         <Text style={styles.hidingh3}>17:49 29/11/2022</Text>
       </View>
     );
