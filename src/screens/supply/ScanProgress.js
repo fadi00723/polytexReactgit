@@ -57,7 +57,7 @@ export default function ScanProgress({route}) {
                 width: 55,
                 height: 55,
                 marginHorizontal: '2%',
-                right: '60%',
+                right: '54%',
               }}
             />
           ) : (
@@ -67,7 +67,7 @@ export default function ScanProgress({route}) {
                 width: 55,
                 height: 55,
                 marginHorizontal: '2%',
-                right: '60%',
+                right: '48%',
               }}
             />
           )}
@@ -89,6 +89,7 @@ export default function ScanProgress({route}) {
                   width: 55,
                   height: 55,
                   marginHorizontal: '2%',
+                  left: 4,
                 }}
               />
             </Pressable>
@@ -102,7 +103,7 @@ export default function ScanProgress({route}) {
                 width: 55,
                 height: 55,
                 marginHorizontal: '2%',
-                left: '70%',
+                left: '60%',
               }}
             />
           ) : (
@@ -113,10 +114,10 @@ export default function ScanProgress({route}) {
               <Image
                 source={require('../../../assets/icons/tickActiveIcon.gif')}
                 style={{
-                  width: 55,
-                  height: 55,
+                  width: 63,
+                  height: 63,
                   marginHorizontal: '2%',
-                  left: '70%',
+                  left: '55%',
                 }}
               />
             </Pressable>
