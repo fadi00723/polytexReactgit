@@ -13,27 +13,15 @@ import CustomButton from '../../components/CustomButton/CustomButton';
 import {useNavigation} from '@react-navigation/native';
 
 export default function EditItemSubType({route}) {
-  const [locations, setLocations] = useState([
-    {
-      address: 'XS',
-    },
-    {
-      address: 'S',
-    },
-    {
-      address: 'XL',
-    },
-    {
-      address: 'L',
-    },
-  ]);
-  const renderButton = item => {
+  const [locations, setLocations] = useState();
+  const renderButton = (item, i) => {
     return (
       <CustomButton
-        label={item.address}
+        key={i}
+        label={item.fullName}
         onPress={() =>
           navigation.navigate('SupplyLocation', {
-            address: item.address,
+            address: item.fullName,
             items: items,
             type: 'Edit',
           })
@@ -41,7 +29,7 @@ export default function EditItemSubType({route}) {
       />
     );
   };
-  const {items} = route.params;
+  const {items, itemSubTypes} = route.params;
   const navigation = useNavigation();
   return (
     <View style={styles.mainContainer}>
@@ -73,7 +61,7 @@ export default function EditItemSubType({route}) {
           /> */}
           <View style={{width: 60, height: 38}} />
           <ScrollView>
-            {locations.map(renderButton)}
+            {itemSubTypes.map(renderButton)}
             <View style={{height: 150}} />
           </ScrollView>
         </View>

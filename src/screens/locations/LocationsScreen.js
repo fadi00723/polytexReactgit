@@ -6,36 +6,35 @@ import {
   ScrollView,
   Pressable,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import CustomHeader from '../../components/CustomHeader/CustomHeader';
 import styles from './LocationScreen.style';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import {useNavigation} from '@react-navigation/native';
+import Api from '../../../Api/Api';
+import Toast from 'react-native-root-toast';
 
 export default function LocationScreen() {
-  const [locations, setLocations] = useState([
-    {
-      address: 'Pnimit A',
-    },
-    {
-      address: 'Yoldot B',
-    },
-    {
-      address: 'Intensive Care',
-    },
-    {
-      address: 'Location 1',
-    },
-    {
-      address: 'Location 2',
-    },
-  ]);
-  const renderButton = item => {
+  useEffect(() => {
+    Api.request('get', 'Gx/getLocations')
+      .then(response => {
+        console.log(response.response.locations);
+        setLocations(response.response.locations);
+        // Localdata.setvalue('token', response.response.data.wt);
+        // Toast.show('Logged in successfully');
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
+  const [locations, setLocations] = useState();
+  const renderButton = (item, i) => {
     return (
       <CustomButton
-        label={item.address}
+        key={i}
+        label={item.locationName}
         onPress={() =>
-          navigation.navigate('SupplyLocation', {address: item.address})
+          navigation.navigate('SupplyLocation', {address: item.locationName})
         }
       />
     );
@@ -71,7 +70,7 @@ export default function LocationScreen() {
             style={styles.mapIcon}
           />
           <ScrollView>
-            {locations.map(renderButton)}
+            {locations != undefined && locations.map(renderButton)}
             {/* <CustomButton label={'Pnimit A'} />
             <CustomButton label={'Yoldot B'} />
             <CustomButton label={'Intensive Care'} />

@@ -10,6 +10,7 @@ class Api {
       headers: {
         csrf: 'token',
         accept: 'application/json',
+        MSGId: 250,
       },
     });
 
@@ -79,9 +80,9 @@ class Api {
       path = this.apiUrl + path;
     }
 
-    //Load token from local storage if not available in request
+    // Load token from local storage if not available in request
     if (typeof bearerToken === 'undefined') {
-      bearerToken = await this.localdata.GetLoginPref();
+      bearerToken = await this.localdata.getvalue('api_token');
     }
 
     if (bearerToken) {
