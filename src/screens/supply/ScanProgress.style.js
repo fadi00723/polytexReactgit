@@ -26,7 +26,6 @@ export default StyleSheet.create({
     textAlign: 'center',
   },
   centeredView: {
-    justifyContent: 'center',
     alignItems: 'center',
   },
   mainModal: {
@@ -48,7 +47,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 100,
-    top: '100%',
+    top: '25%',
   },
   hidingh2: {
     color: GlobalColors.lightGrey,
@@ -123,7 +122,6 @@ export default StyleSheet.create({
   },
   containerTable: {
     width: '80%',
-    height: 50,
     paddingTop: 30,
     backgroundColor: GlobalColors.mainBlue,
   },
