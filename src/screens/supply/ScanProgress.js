@@ -6,6 +6,7 @@ import {
   ScrollView,
   Pressable,
   TouchableWithoutFeedback,
+  ActivityIndicator,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import CustomHeader from '../../components/CustomHeader/CustomHeader';
@@ -21,16 +22,17 @@ import {useNavigation} from '@react-navigation/native';
 import GlobalColors from '../../utils/GlobalColors';
 import CustomModal from '../../components/CustomModal/CustomModal';
 import Api from '../../../Api/Api';
+import Toast from 'react-native-root-toast';
 
 export default function ScanProgress({route}) {
   useEffect(() => {
-    console.log('type', type, location, items);
+    console.log('type', type, location, items, location_id);
   });
   const [playpause, setPlayPasue] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [showDone, setShowDone] = useState(false);
   const [showDiscard, setShowDiscard] = useState(false);
-  const [tableHead, setTableHead] = useState(['ITEM', 'SUB', 'SCANNED']);
+  const [tableHead, setTableHead] = useState(['ITEM', 'SUB', 'SCAN/STD']);
   const [tableTitle, setTableTitle] = useState(['1', '2']);
   const listofIds = [
     '2831B38304BC4E08',
@@ -146,9 +148,9 @@ export default function ScanProgress({route}) {
     '2831B38211510333',
   ];
   const [tableData, setTableData] = useState([
-    ['Blue shirt', 'M', '120'],
-    ['Shirt', 'XL', 85],
-    ['Unregistered', '', 15],
+    // ['Blue shirt', 'M', '120'],
+    // ['Shirt', 'XL', 85],
+    // ['Unregistered', '', 15],
   ]);
 
   showDone &&
@@ -160,49 +162,78 @@ export default function ScanProgress({route}) {
         : navigation.navigate('LocationScreen');
     }, 2000);
   useEffect(() => {
-    Api.request('get', 'Gx/getItemIdsList')
-      .then(response => {
-        console.log('response', response.response.itemIds);
+    type == 'Supply To' &&
+      Api.request('get', 'Gx/getItemIdsList')
+        .then(response => {
+          //logic to get tags and get items from the call and manupalate data for table
+          const tempdata = [];
+          const tempTbledata = [];
 
-        const tempdata = [];
+          let tempfinal = [];
+          const length = 0;
+          let unregstered = 0;
 
-        response.response.itemIds.forEach(element => {
-          if (listofIds.includes(element.rfid)) {
-            tempdata.push([
+          response.response.itemIds.forEach(element => {
+            if (listofIds.includes(element.rfid)) {
+              tempdata.push({
+                Mainitem: element.itemTypeName,
+                subitem: element.itemSubTypeName,
+                totalitems: element.statusId,
+              });
+            } else {
+            }
+          });
+          tempfinal = supplyReport;
+
+          for (var a = 0; a < supplyReport.length; a++) {
+            tempfinal[a].totalitems = 0;
+          }
+
+          for (var i = 0; i < supplyReport.length; i++) {
+            for (var j = 0; j < tempdata.length; j++) {
+              if (
+                tempdata[j].Mainitem == supplyReport[i].itemTypeName &&
+                tempdata[j].subitem == supplyReport[i].itemSubTypeName
+              ) {
+                tempfinal[i].totalitems = tempfinal[i].totalitems + 1;
+              } else {
+              }
+            }
+          }
+          unregstered = listofIds.length - 1 - response.response.itemIds.length;
+
+          tempfinal.forEach(element => {
+            tempTbledata.push([
               element.itemTypeName,
               element.itemSubTypeName,
-              element.statusId,
+              element.totalitems + '/' + element.standardValue,
             ]);
-          } else {
-          }
+          });
+
+          tempTbledata.push(['Unknown', '', unregstered + '/' + '-']);
+          console.log('tempdta', tempdata);
+          setTableData(tempTbledata);
+        })
+        .catch(error => {
+          console.log(error);
         });
-
-        // const x = response.response.itemIds.filter(obj =>
-        //   listofIds.includes(obj.rfid),
-        // );
-        // setTableData(x);
-        console.log('filtered obj', tempdata);
-        type == 'Supply Location' && setTableData(tempdata);
-        // const apidata = response.response.itemIds;
-
-        // const temp = [];
-        // for (let i = 0; i <= listofIds.length; i++) {
-
-        //   if(apidata[])
-        // }
-
-        // setLocations(response.response.locations);
-        // Localdata.setvalue('token', response.response.data.wt);
-        // Toast.show('Logged in successfully');
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    //logic to get tags and get items from the call and manupalate data for table
   }, []);
 
   const supplytolocation = () => {
-    Api.request('get', 'Gx/getItemIdsList')
-      .then(response => {})
+    const params = {
+      actionDate: new Date().toString,
+      tagIds: listofIds,
+      isOffline: true,
+      locationId: location_id,
+      stationId: 24913,
+    };
+    console.log(params);
+    Api.request('post', 'Gx/supplyToLocation', params)
+      .then(response => {
+        console.log(response.description);
+        Toast.show(response.description);
+      })
       .catch(error => {
         console.log(error);
       });
@@ -294,13 +325,14 @@ export default function ScanProgress({route}) {
               ? 'Upload soil items?'
               : type == 'Clean'
               ? 'Upload clean items?'
-              : type == 'Supply Location'
+              : type == 'Supply To'
               ? 'Supply scanned items to: ' + location + '?'
               : type == 'Edit'
               ? 'Do you want to associate scanned items?'
               : 'Received Scan Items'
           }
           onPressConfirm={() => {
+            type == 'Supply To' && supplytolocation();
             console.log('confirm Pressed');
             if (showDiscard) {
               setShowModal(false), setTableTitle(['']), setTableData(['']);
@@ -315,30 +347,37 @@ export default function ScanProgress({route}) {
   const renderTable = () => {
     return (
       <View style={styles.containerTable}>
-        <ScrollView style={{height: '61%'}}>
-          <Table>
-            <Row
-              data={tableHead}
-              flexArr={[4, 2, 3]}
-              style={styles.head}
-              textStyle={styles.text}
-            />
-            <TableWrapper style={styles.wrapper}>
-              {/* <Col
+        {tableData.length <= 0 ? (
+          <ActivityIndicator
+            style={{alignSelf: 'center', height: 300}}
+            size="large"
+            color="white"></ActivityIndicator>
+        ) : (
+          <ScrollView style={{height: '61%'}}>
+            <Table>
+              <Row
+                data={tableHead}
+                flexArr={[3, 3, 3]}
+                style={styles.head}
+                textStyle={styles.text}
+              />
+              <TableWrapper style={styles.wrapper}>
+                {/* <Col
               data={tableTitle}
               style={styles.title}
               heightArr={[28, 28]}
               textStyle={styles.text}
             /> */}
-              <Rows
-                data={tableData}
-                flexArr={[4, 2, 3]}
-                style={styles.row}
-                textStyle={styles.text2}
-              />
-            </TableWrapper>
-          </Table>
-        </ScrollView>
+                <Rows
+                  data={tableData}
+                  flexArr={[3, 3, 3]}
+                  style={styles.row}
+                  textStyle={styles.text2}
+                />
+              </TableWrapper>
+            </Table>
+          </ScrollView>
+        )}
       </View>
     );
   };
@@ -383,7 +422,7 @@ export default function ScanProgress({route}) {
     );
   };
   const navigation = useNavigation();
-  const {type, location, items} = route.params;
+  const {type, location, items, location_id, supplyReport} = route.params;
   return (
     <View style={styles.mainContainer}>
       <CustomHeader />

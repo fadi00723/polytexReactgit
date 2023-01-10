@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Pressable,
+  ActivityIndicator,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import CustomHeader from '../../components/CustomHeader/CustomHeader';
@@ -34,7 +35,11 @@ export default function LocationScreen() {
         key={i}
         label={item.locationName}
         onPress={() =>
-          navigation.navigate('SupplyLocation', {address: item.locationName})
+          navigation.navigate('SupplyLocation', {
+            address: item.locationName,
+            location_id: item.id,
+            supplyReport: item.supplyReport,
+          })
         }
       />
     );
@@ -70,7 +75,14 @@ export default function LocationScreen() {
             style={styles.mapIcon}
           />
           <ScrollView>
-            {locations != undefined && locations.map(renderButton)}
+            {locations != undefined ? (
+              locations.map(renderButton)
+            ) : (
+              <ActivityIndicator
+                style={{alignSelf: 'center', height: 300}}
+                size="large"
+                color="white"></ActivityIndicator>
+            )}
             {/* <CustomButton label={'Pnimit A'} />
             <CustomButton label={'Yoldot B'} />
             <CustomButton label={'Intensive Care'} />

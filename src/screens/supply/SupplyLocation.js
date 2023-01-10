@@ -26,7 +26,7 @@ export default function SupplyLocation({route}) {
       </View>
     );
   };
-  const {address, items, type} = route.params;
+  const {address, items, type, supplyReport, location_id} = route.params;
   const navigation = useNavigation();
   return (
     <View style={styles.mainContainer}>
@@ -66,6 +66,8 @@ export default function SupplyLocation({route}) {
                 type: type == undefined || type == null ? 'Supply To' : type,
                 items: items,
                 location: address,
+                location_id: location_id,
+                supplyReport: supplyReport,
               })
             }>
             <Text style={styles.hidingH1}>{strings.STARTSCAN}</Text>
